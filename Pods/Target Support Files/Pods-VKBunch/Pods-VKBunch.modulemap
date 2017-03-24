@@ -1,0 +1,6 @@
+framework module Pods_VKBunch {
+  umbrella header "Pods-VKBunch-umbrella.h"
+
+  export *
+  module * { export * }
+}
