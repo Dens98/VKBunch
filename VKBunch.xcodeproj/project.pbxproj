@@ -14,6 +14,9 @@
 		0107E8EF1E855EE300C3D3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0107E8ED1E855EE300C3D3BA /* LaunchScreen.storyboard */; };
 		0107E8FA1E855EE300C3D3BA /* VKBunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E8F91E855EE300C3D3BA /* VKBunchTests.swift */; };
 		0107E9051E855EE300C3D3BA /* VKBunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E9041E855EE300C3D3BA /* VKBunchUITests.swift */; };
+		965D00D1CBFC24C3EEA748FD /* Pods_VKBunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */; };
+		B38E1144A83B8727E6793D00 /* Pods_VKBunchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA00F3424F5A16D5A2338E67 /* Pods_VKBunchTests.framework */; };
+		FE3F8EB48196AEC76EAB2F9B /* Pods_VKBunchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0DD8067216D7572343F425 /* Pods_VKBunchUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,16 @@
 		0107E9001E855EE300C3D3BA /* VKBunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKBunchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0107E9041E855EE300C3D3BA /* VKBunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKBunchUITests.swift; sourceTree = "<group>"; };
 		0107E9061E855EE300C3D3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C66CA41E85667D00C753FA /* VKBunch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKBunch-Bridging-Header.h"; sourceTree = "<group>"; };
+		14DD5B5D919C65D1CA6FA1F8 /* Pods-VKBunchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1FD4B04A4E63D24812F4E540 /* Pods-VKBunchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37A283A76B78F29AE279A61F /* Pods-VKBunchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A0DD8067216D7572343F425 /* Pods_VKBunchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1EB7DAB663BACD349DBBAF /* Pods-VKBunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.debug.xcconfig"; sourceTree = "<group>"; };
+		CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA08038E7EEC3F53BDE18411 /* Pods-VKBunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.release.xcconfig"; sourceTree = "<group>"; };
+		E968D8887E50E24A0E0EAC06 /* Pods-VKBunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA00F3424F5A16D5A2338E67 /* Pods_VKBunchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965D00D1CBFC24C3EEA748FD /* Pods_VKBunch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38E1144A83B8727E6793D00 /* Pods_VKBunchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3F8EB48196AEC76EAB2F9B /* Pods_VKBunchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +97,8 @@
 				0107E8F81E855EE300C3D3BA /* VKBunchTests */,
 				0107E9031E855EE300C3D3BA /* VKBunchUITests */,
 				0107E8E21E855EE300C3D3BA /* Products */,
+				66A1F0974F2C88E01E1C0F3D /* Pods */,
+				C4123FC68345F3CDD933A126 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +121,7 @@
 				0107E8EB1E855EE300C3D3BA /* Assets.xcassets */,
 				0107E8ED1E855EE300C3D3BA /* LaunchScreen.storyboard */,
 				0107E8F01E855EE300C3D3BA /* Info.plist */,
+				01C66CA41E85667D00C753FA /* VKBunch-Bridging-Header.h */,
 			);
 			path = VKBunch;
 			sourceTree = "<group>";
@@ -125,6 +144,29 @@
 			path = VKBunchUITests;
 			sourceTree = "<group>";
 		};
+		66A1F0974F2C88E01E1C0F3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B1EB7DAB663BACD349DBBAF /* Pods-VKBunch.debug.xcconfig */,
+				DA08038E7EEC3F53BDE18411 /* Pods-VKBunch.release.xcconfig */,
+				E968D8887E50E24A0E0EAC06 /* Pods-VKBunchTests.debug.xcconfig */,
+				37A283A76B78F29AE279A61F /* Pods-VKBunchTests.release.xcconfig */,
+				1FD4B04A4E63D24812F4E540 /* Pods-VKBunchUITests.debug.xcconfig */,
+				14DD5B5D919C65D1CA6FA1F8 /* Pods-VKBunchUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4123FC68345F3CDD933A126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */,
+				EA00F3424F5A16D5A2338E67 /* Pods_VKBunchTests.framework */,
+				3A0DD8067216D7572343F425 /* Pods_VKBunchUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0107E9091E855EE300C3D3BA /* Build configuration list for PBXNativeTarget "VKBunch" */;
 			buildPhases = (
+				AA7BAEA30AAA6C125BA69B1C /* [CP] Check Pods Manifest.lock */,
 				0107E8DD1E855EE300C3D3BA /* Sources */,
 				0107E8DE1E855EE300C3D3BA /* Frameworks */,
 				0107E8DF1E855EE300C3D3BA /* Resources */,
+				DCD3DD41D48EA672DC531524 /* [CP] Embed Pods Frameworks */,
+				17CD401077170C283BA72541 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0107E90C1E855EE300C3D3BA /* Build configuration list for PBXNativeTarget "VKBunchTests" */;
 			buildPhases = (
+				2756C272DEEA62C46C6D956D /* [CP] Check Pods Manifest.lock */,
 				0107E8F11E855EE300C3D3BA /* Sources */,
 				0107E8F21E855EE300C3D3BA /* Frameworks */,
 				0107E8F31E855EE300C3D3BA /* Resources */,
+				BE813767A3F051A83E8F7D0D /* [CP] Embed Pods Frameworks */,
+				2AC3D4744397D7A187D6B240 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0107E90F1E855EE300C3D3BA /* Build configuration list for PBXNativeTarget "VKBunchUITests" */;
 			buildPhases = (
+				372E20665963C84A8E7FAC8D /* [CP] Check Pods Manifest.lock */,
 				0107E8FC1E855EE300C3D3BA /* Sources */,
 				0107E8FD1E855EE300C3D3BA /* Frameworks */,
 				0107E8FE1E855EE300C3D3BA /* Resources */,
+				C1C5D1789CE69C6614073F12 /* [CP] Embed Pods Frameworks */,
+				6E6CD926CD609D7CCD727604 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +245,7 @@
 					0107E8E01E855EE300C3D3BA = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3V2GJXUSCV;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					0107E8F41E855EE300C3D3BA = {
@@ -256,6 +308,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17CD401077170C283BA72541 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2756C272DEEA62C46C6D956D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2AC3D4744397D7A187D6B240 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		372E20665963C84A8E7FAC8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6E6CD926CD609D7CCD727604 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA7BAEA30AAA6C125BA69B1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE813767A3F051A83E8F7D0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1C5D1789CE69C6614073F12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCD3DD41D48EA672DC531524 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0107E8DD1E855EE300C3D3BA /* Sources */ = {
@@ -413,32 +603,40 @@
 		};
 		0107E90A1E855EE300C3D3BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B1EB7DAB663BACD349DBBAF /* Pods-VKBunch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3V2GJXUSCV;
 				INFOPLIST_FILE = VKBunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shust.Test2.VKBunch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKBunch/VKBunch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		0107E90B1E855EE300C3D3BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA08038E7EEC3F53BDE18411 /* Pods-VKBunch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3V2GJXUSCV;
 				INFOPLIST_FILE = VKBunch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shust.Test2.VKBunch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKBunch/VKBunch-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		0107E90D1E855EE300C3D3BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E968D8887E50E24A0E0EAC06 /* Pods-VKBunchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +652,7 @@
 		};
 		0107E90E1E855EE300C3D3BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37A283A76B78F29AE279A61F /* Pods-VKBunchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +668,7 @@
 		};
 		0107E9101E855EE300C3D3BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD4B04A4E63D24812F4E540 /* Pods-VKBunchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3V2GJXUSCV;
@@ -483,6 +683,7 @@
 		};
 		0107E9111E855EE300C3D3BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DD5B5D919C65D1CA6FA1F8 /* Pods-VKBunchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3V2GJXUSCV;
@@ -514,6 +715,7 @@
 				0107E90B1E855EE300C3D3BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0107E90C1E855EE300C3D3BA /* Build configuration list for PBXNativeTarget "VKBunchTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +724,7 @@
 				0107E90E1E855EE300C3D3BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0107E90F1E855EE300C3D3BA /* Build configuration list for PBXNativeTarget "VKBunchUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +733,7 @@
 				0107E9111E855EE300C3D3BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
