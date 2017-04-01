@@ -13,6 +13,10 @@ import VK_ios_sdk
 
 
 class VKHelper: NSObject {
+    // My code
+    // sent to ViewCntr array but no error
+    
+    //My code
     
     static let shared = VKHelper()
     
@@ -57,8 +61,8 @@ class VKHelper: NSObject {
     }
     
     
-    func getFriends(in controller: UIViewController, completion: @escaping SimpleCompletion) {
-        
+    //func getFriends(in controller: UIViewController, completion: @escaping SimpleCompletion) {
+     func getFriends(in controller: UIViewController, completion: @escaping ([VKUsersArray]?) ) {
         auth(in: controller) { error in
             if error == nil{
                 VKApi.friends().get([VK_API_FIELDS : "name, nickname, photo_200_orig"]).execute(resultBlock: { (result) in
@@ -69,11 +73,13 @@ class VKHelper: NSObject {
                                 if let user = usersArray[i]
                                 {
                                     print("\(user.first_name) \(user.last_name) \(user.screen_name)\n")
+                                    
                                 }
                             }
                             print("у меня \(usersArray.count) друзей")
                             
-                            completion(nil)
+                            completion(usersArray)
+                            //completion(nil)
                         }                    }
                 }, errorBlock: { error in completion(error) })
             } else{ completion(error) }
