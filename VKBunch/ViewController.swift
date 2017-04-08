@@ -15,7 +15,7 @@ class ViewController: UIViewController {
             }
     
     @IBAction func ButtonLogIn(_ sender: UIButton) {
-        VKHelper.shared.getFriends(in: self) { (userArray) in
+        VKHelper.shared.getFriends(in: self) { (userArray, nil) in
             
             
             print("\(String(describing: userArray?[0].first_name))", "\(String(describing: userArray?[0].id))")

@@ -11,6 +11,10 @@ import Foundation
 import UIKit
 import VK_ios_sdk
 
+enum MyError: String, Error {
+    case unableToParse = "unable to parse"
+    case badResult = "bad result"
+}
 
 class VKHelper: NSObject {
     // My code
@@ -87,29 +91,29 @@ class VKHelper: NSObject {
 //        
 //    }
     
-    func getFriends(in controller: UIViewController, completion: @escaping (VKUsersArray?) -> Void) {
+    func getFriends(in controller: UIViewController, completion: @escaping (VKUsersArray?, Error?) -> Void) {
 //        let appDelegate = UIApplication.shared.delegate as? AppDelegate
 //        appDelegate?.window?.rootViewController
         auth(in: controller) { error in
             if error == nil{
                 VKApi.friends().get([VK_API_FIELDS : "name, nickname, photo_200_orig"]).execute(resultBlock: { (result) in
                     guard let result = result else {
-                        completion(nil)
+                        completion(nil, MyError.badResult)
                         return
                     }
                     
                     guard let usersArray = result.parsedModel as? VKUsersArray else {
-                        completion(nil)
+                        completion(nil, MyError.unableToParse)
                         return
                     }
                     
-                    completion(usersArray)
+                    completion(usersArray, nil)
                 },
-                errorBlock: { _ in
-                    completion(nil)
+                errorBlock: { error in
+                    completion(nil, error)
                 })
             } else {
-                completion(nil)
+                completion(nil, error)
             }
         }
         
