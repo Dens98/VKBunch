@@ -23,7 +23,7 @@ class VKHelper: NSObject {
     typealias SimpleCompletion = (Error?) -> Void
     fileprivate var completion: SimpleCompletion?
     
-    fileprivate var controller: UIViewController?
+    fileprivate weak var controller: UIViewController?
     
     let SCOPE = [VK_PER_FRIENDS, VK_PER_WALL, VK_PER_AUDIO, VK_PER_PHOTOS, VK_PER_NOHTTPS, VK_PER_EMAIL, VK_PER_MESSAGES, VK_PER_OFFLINE]
     
@@ -62,30 +62,62 @@ class VKHelper: NSObject {
     
     
     //func getFriends(in controller: UIViewController, completion: @escaping SimpleCompletion) {
-     func getFriends(in controller: UIViewController, completion: @escaping ([VKUsersArray]?) ) {
+
+//        auth(in: controller) { error in
+//            if error == nil{
+//                VKApi.friends().get([VK_API_FIELDS : "name, nickname, photo_200_orig"]).execute(resultBlock: { (result) in
+//                    if let result = result {
+//                        if let usersArray = result.parsedModel as? VKUsersArray {
+//                            
+//                            for i in 0..<usersArray.count {
+//                                if let user = usersArray[i]
+//                                {
+//                                    print("\(user.first_name) \(user.last_name) \(user.screen_name)\n")
+//                                    
+//                                }
+//                            }
+//                            print("у меня \(usersArray.count) друзей")
+//                            
+//                            completion(usersArray)
+//                            //completion(nil)
+//                        }                    }
+//                }, errorBlock: { error in completion(error) })
+//            } else{ completion(error) }
+//        }
+//        
+//    }
+    
+    func getFriends(in controller: UIViewController, completion: @escaping (VKUsersArray?) -> Void) {
+//        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//        appDelegate?.window?.rootViewController
         auth(in: controller) { error in
             if error == nil{
                 VKApi.friends().get([VK_API_FIELDS : "name, nickname, photo_200_orig"]).execute(resultBlock: { (result) in
-                    if let result = result {
-                        if let usersArray = result.parsedModel as? VKUsersArray {
-                            
-                            for i in 0..<usersArray.count {
-                                if let user = usersArray[i]
-                                {
-                                    print("\(user.first_name) \(user.last_name) \(user.screen_name)\n")
-                                    
-                                }
-                            }
-                            print("у меня \(usersArray.count) друзей")
-                            
-                            completion(usersArray)
-                            //completion(nil)
-                        }                    }
-                }, errorBlock: { error in completion(error) })
-            } else{ completion(error) }
+                    guard let result = result else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    guard let usersArray = result.parsedModel as? VKUsersArray else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    completion(usersArray)
+                },
+                errorBlock: { _ in
+                    completion(nil)
+                })
+            } else {
+                completion(nil)
+            }
         }
         
     }
+
+    
+    
+    
 }
 
 

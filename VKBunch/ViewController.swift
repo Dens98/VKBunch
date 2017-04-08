@@ -16,14 +16,15 @@ class ViewController: UIViewController {
     
     @IBAction func ButtonLogIn(_ sender: UIButton) {
         VKHelper.shared.getFriends(in: self) { (userArray) in
-            print("\(userArray[0].first_name)")
             
-        }
+            
+            print("\(String(describing: userArray?[0].first_name))", "\(String(describing: userArray?[0].id))")
+            }
         
-        VKHelper.shared.getFriends(in: self) { (error) in
-            
-            //       print(error)
-        }
+//        VKHelper.shared.getFriends(in: self) { (error) in
+//            
+//            print(error)
+//        }
 
         
         //print("Hi")
