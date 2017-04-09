@@ -14,7 +14,7 @@
 		0107E8EF1E855EE300C3D3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0107E8ED1E855EE300C3D3BA /* LaunchScreen.storyboard */; };
 		0107E8FA1E855EE300C3D3BA /* VKBunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E8F91E855EE300C3D3BA /* VKBunchTests.swift */; };
 		0107E9051E855EE300C3D3BA /* VKBunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E9041E855EE300C3D3BA /* VKBunchUITests.swift */; };
-		01F708A71E9951640054D36B /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F708A61E9951640054D36B /* FriendsController.swift */; };
+		01784E7B1E9A1EA0009D2DA1 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */; };
 		9295C29D1E86E6C70057A0A3 /* VKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C29C1E86E6C70057A0A3 /* VKHelper.swift */; };
 		965D00D1CBFC24C3EEA748FD /* Pods_VKBunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */; };
 		B38E1144A83B8727E6793D00 /* Pods_VKBunchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA00F3424F5A16D5A2338E67 /* Pods_VKBunchTests.framework */; };
@@ -52,8 +52,8 @@
 		0107E9001E855EE300C3D3BA /* VKBunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKBunchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0107E9041E855EE300C3D3BA /* VKBunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKBunchUITests.swift; sourceTree = "<group>"; };
 		0107E9061E855EE300C3D3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		01C66CA41E85667D00C753FA /* VKBunch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKBunch-Bridging-Header.h"; sourceTree = "<group>"; };
-		01F708A61E9951640054D36B /* FriendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsController.swift; path = "../../../../Downloads/45e3178b6efcb06229c292498ee156c7-b635b61ccea46dfc49c2da87164a1fa0c7cd0aa8/FriendsController.swift"; sourceTree = "<group>"; };
 		14DD5B5D919C65D1CA6FA1F8 /* Pods-VKBunchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1FD4B04A4E63D24812F4E540 /* Pods-VKBunchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		37A283A76B78F29AE279A61F /* Pods-VKBunchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 			children = (
 				0107E8E41E855EE300C3D3BA /* AppDelegate.swift */,
 				0107E8E61E855EE300C3D3BA /* ViewController.swift */,
-				01F708A61E9951640054D36B /* FriendsController.swift */,
 				0107E8E81E855EE300C3D3BA /* Main.storyboard */,
 				9295C29C1E86E6C70057A0A3 /* VKHelper.swift */,
+				01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */,
 				0107E8EB1E855EE300C3D3BA /* Assets.xcassets */,
 				0107E8ED1E855EE300C3D3BA /* LaunchScreen.storyboard */,
 				0107E8F01E855EE300C3D3BA /* Info.plist */,
@@ -459,7 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9295C29D1E86E6C70057A0A3 /* VKHelper.swift in Sources */,
-				01F708A71E9951640054D36B /* FriendsController.swift in Sources */,
+				01784E7B1E9A1EA0009D2DA1 /* FriendsController.swift in Sources */,
 				0107E8E71E855EE300C3D3BA /* ViewController.swift in Sources */,
 				0107E8E51E855EE300C3D3BA /* AppDelegate.swift in Sources */,
 			);
