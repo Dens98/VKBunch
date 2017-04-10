@@ -91,12 +91,19 @@ class VKHelper: NSObject {
 //        
 //    }
     
-    func getFriends(in controller: UIViewController, completion: @escaping (VKUsersArray?, Error?) -> Void) {
+    func getFriends(in controller: UIViewController, count: Int, offset: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
 //        let appDelegate = UIApplication.shared.delegate as? AppDelegate
 //        appDelegate?.window?.rootViewController
         auth(in: controller) { error in
             if error == nil{
-                VKApi.friends().get([VK_API_FIELDS : "name, nickname, photo_200_orig"]).execute(resultBlock: { (result) in
+                let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
+                              VK_API_OFFSET : offset,
+                              VK_API_COUNT : count] as [String : Any]
+                
+                
+                VKApi.friends().get(params).execute(resultBlock: { (result) in
+                   
+                    
                     guard let result = result else {
                         completion(nil, MyError.badResult)
                         return

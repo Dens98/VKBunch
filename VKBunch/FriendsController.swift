@@ -7,9 +7,8 @@ class FriendsController: UITableViewController {
     
     var friends: [VKUser] = [] // [НазваниеКласса] - это значит массив объектов класса 'НазваниеКласса'
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        // Настраиваем UI
+    override func viewDidLoad() {
+        self.getFriendsFromVK()
     }
     
     //MARK: UITableViewDataSource
@@ -32,11 +31,11 @@ class FriendsController: UITableViewController {
         }
         
         // Если последняя ячейка, то грузим следующую порцию друзей
-        if indexPath.row == friends.count - 1 {
+        if indexPath.row == friends.count - 21 {
             getFriendsFromVK()
         }
 
-        // Тут уже настраиваем ячейку
+        cell?.textLabel?.text = String(indexPath.row + 1)  + ". " + friends[indexPath.row].last_name + " " + friends[indexPath.row].first_name + " id:" + String(Int(friends[indexPath.row].id))
         
         return cell!
     }
@@ -45,21 +44,17 @@ class FriendsController: UITableViewController {
     
     func getFriendsFromVK() {
         
-        VKHelper.shared.getFriends(count: friendsInRequests, offset: friends.count, success: { vkFriendsArray in
+        VKHelper.shared.getFriends(in: self, count: friendsInRequests, offset: friends.count) { (userArray, error) in
             
             // Добавляем новых друзей в список
             var newFriends: [VKUser] = []
-            if let friendsArray = vkFriendsArray {
+            if let friendsArray = userArray {
                 newFriends = friendsArray.items as! [VKUser]
             }
             self.friends.append(contentsOf: newFriends)
             
-            // Затем обновляем таблицу с новыми данными
-            
-        }, failure: { error in
-            
-            // Показываем какой-нибудь алерт с ошибкой
-            
-        })
+            self.tableView.reloadData()
+        }
+        
     }
 }

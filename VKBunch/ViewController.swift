@@ -14,8 +14,15 @@ class ViewController: UIViewController {
         
             }
     
+    @IBAction func ButtonLogOut(_ sender: Any) {
+        VKHelper.shared.logout()
+        print("logOut")
+    }
+    
     @IBAction func ButtonLogIn(_ sender: UIButton) {
-        VKHelper.shared.getFriends(in: self) { (userArray, nil) in
+
+        
+        VKHelper.shared.getFriends(in: self, count: 100, offset: 0) { (userArray, error) in
             
             
             print("\(String(describing: userArray?[0].first_name))", "\(String(describing: userArray?[0].id))")
