@@ -43,12 +43,14 @@ class VKHelper: NSObject {
     func auth(in controller: UIViewController, completion: @escaping SimpleCompletion) {
         VKSdk.wakeUpSession(SCOPE) { (state, error) in
             if state == VKAuthorizationState.authorized {
+                print("Authorized")
                 completion(nil)
             }
             else{
                 self.controller = controller
                 self.completion = completion
                 VKSdk.authorize(self.SCOPE, with: .disableSafariController)
+                print("auth needed")
             }
         }
     }
