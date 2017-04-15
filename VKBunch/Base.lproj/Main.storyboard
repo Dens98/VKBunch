@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ctb-fX-VyH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dWl-6p-rMi">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -31,8 +31,23 @@
                                     <segue destination="sxC-6x-Wy0" kind="show" id="5BH-zO-8c2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-Mi-Tqu">
+                                <rect key="frame" x="252" y="496" width="52" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="ryZ-sE-NF4"/>
+                                    <constraint firstAttribute="width" constant="52" id="zig-DR-XuR"/>
+                                </constraints>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="ButtonLogOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNV-St-rxc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_vk_activity_logo" highlightedImage="ic_vk_ios7_activity_logo" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-M5-9vl">
+                                <rect key="frame" x="20" y="85" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PES-xd-iDd">
-                                <rect key="frame" x="16" y="542" width="75" height="18"/>
+                                <rect key="frame" x="16" y="496" width="75" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="15J-2D-iDu"/>
                                     <constraint firstAttribute="height" constant="18" id="ch8-7W-U9s"/>
@@ -42,38 +57,87 @@
                                     <action selector="ButtonLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIT-Vf-pZ0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-Mi-Tqu">
-                                <rect key="frame" x="252" y="530" width="52" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Hnl-Kj-0lN"/>
-                                    <constraint firstAttribute="width" constant="52" id="zig-DR-XuR"/>
-                                </constraints>
-                                <state key="normal" title="Log out"/>
-                                <connections>
-                                    <action selector="ButtonLogOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNV-St-rxc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PES-xd-iDd" secondAttribute="bottom" constant="5" id="2eu-lo-eBB"/>
                             <constraint firstItem="h66-Xd-Mle" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7ci-pd-dvn"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PES-xd-iDd" secondAttribute="bottom" constant="8" id="Byd-ld-ivf"/>
-                            <constraint firstItem="PES-xd-iDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OfU-sM-KKK"/>
+                            <constraint firstItem="PES-xd-iDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jzk-E5-Xcc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vb-Mi-Tqu" secondAttribute="bottom" constant="5" id="LlO-F9-dxh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Vb-Mi-Tqu" secondAttribute="trailing" id="SKw-6c-93g"/>
                             <constraint firstItem="h66-Xd-Mle" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yXR-JX-rSb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vb-Mi-Tqu" secondAttribute="bottom" constant="8" id="ybr-La-fom"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R67-po-qor"/>
+                    <connections>
+                        <outlet property="myPhotoSetting" destination="LgA-M5-9vl" id="gF2-2C-fQ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.625" y="135.21126760563379"/>
+            <point key="canvasLocation" x="761.25" y="2196.1267605633802"/>
         </scene>
-        <!--Friends Controller-->
+        <!--Search-->
+        <scene sceneID="Xee-ej-ATc">
+            <objects>
+                <viewController id="NR7-Qj-IZf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sWP-9H-ebX"/>
+                        <viewControllerLayoutGuide type="bottom" id="vku-nr-A6u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WM4-n3-kvB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" id="jM7-y3-lcs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxa-HH-rgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="1523"/>
+        </scene>
+        <!--Bunch-->
+        <scene sceneID="ILY-MQ-Ki7">
+            <objects>
+                <viewController id="4ZD-5U-FDC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cVb-Nh-esR"/>
+                        <viewControllerLayoutGuide type="bottom" id="V2Z-JC-nMy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UJt-Bb-whm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bunch" id="4TE-8J-e7A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FpC-Jp-tpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="868"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yBK-ME-xX9">
+            <objects>
+                <tabBarController id="dWl-6p-rMi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="dLM-sf-GZN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4ZD-5U-FDC" kind="relationship" relationship="viewControllers" id="CZD-YT-UxO"/>
+                        <segue destination="NR7-Qj-IZf" kind="relationship" relationship="viewControllers" id="OhA-e9-h5i"/>
+                        <segue destination="Ctb-fX-VyH" kind="relationship" relationship="viewControllers" id="KX0-sO-jF1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cnf-os-chM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-898" y="1221"/>
+        </scene>
+        <!--My friends-->
         <scene sceneID="OhY-Pj-bqu">
             <objects>
-                <tableViewController id="sxC-6x-Wy0" customClass="FriendsController" customModule="VKBunch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="My friends" id="sxC-6x-Wy0" customClass="FriendsController" customModule="VKBunch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aq3-0Y-vks">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +147,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ni-dS-gpn" id="dhk-cC-6WA">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -93,10 +157,12 @@
                             <outlet property="delegate" destination="sxC-6x-Wy0" id="bkl-Xt-cCO"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epn-eh-r85" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="135"/>
+            <point key="canvasLocation" x="1534" y="2196"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qcx-M4-1Xd">
@@ -131,10 +197,11 @@
             </objects>
             <point key="canvasLocation" x="2029" y="133"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings-->
         <scene sceneID="5Ia-2G-zxI">
             <objects>
                 <navigationController id="Ctb-fX-VyH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" id="a5d-eA-Ub5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z68-zp-PgM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -145,7 +212,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BK7-De-7pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-671" y="134"/>
+            <point key="canvasLocation" x="-81" y="2198"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_vk_activity_logo" width="60" height="60"/>
+        <image name="ic_vk_ios7_activity_logo" width="60" height="60"/>
+    </resources>
 </document>
