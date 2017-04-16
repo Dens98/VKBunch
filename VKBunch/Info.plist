@@ -28,7 +28,6 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>vkauthorize</string>
 				<string>vk5944407</string>
 			</array>
 		</dict>

@@ -133,6 +133,8 @@ class VKHelper: NSObject {
 }
 
 
+
+
 extension VKHelper: VKSdkDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         completion?(result.error)

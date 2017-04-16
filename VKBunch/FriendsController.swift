@@ -9,6 +9,9 @@ class FriendsController: UITableViewController {
     
     override func viewDidLoad() {
         self.getFriendsFromVK()
+//        VKHelper.shared.auth(in: self) { (error) in
+//            print(error)
+//        } 
     }
     
     //MARK: UITableViewDataSource
