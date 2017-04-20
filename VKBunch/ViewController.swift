@@ -10,25 +10,45 @@ import UIKit
 import VK_ios_sdk
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var myPhotoSetting: UIImageView?
     override func viewDidAppear(_ animated: Bool) {
         
             }
+
+    struct friend {
+        var id: Int?
+        var firstName: String?
+        var lastName: String?
+        var photo200: String?
+    }
+    var friendArray = [[friend]]()
+    func qw() {
+        
+        VKHelper.shared.getFriendsOutCF(in: self) { (userArray, error) in
+//            friendArray[0][0].app
+            for i in 0..<Int((userArray?.count)!) {
+                self.friendArray[0][i].id = (userArray?[UInt(i)].id as! Int)
+                self.friendArray[0][i].firstName = userArray?[UInt(i)].first_name
+                self.friendArray[0][i].lastName = userArray?[UInt(i)].last_name
+                self.friendArray[0][i].photo200 = userArray?[UInt(i)].photo_200_orig
+                print(String(i + 1) + self.friendArray[0][i].lastName! + self.friendArray[0][i].firstName!)
+            }
+            
+        }
+    }
+    
     
     @IBAction func ButtonLogOut(_ sender: Any) {
         VKHelper.shared.logout()
         print("logOut")
     }
-    let qwer: Bool = true
     @IBAction func ButtonLogIn(_ sender: UIButton) {
 
-       VKHelper.shared.getFriends(in: self, count: 100, offset: 0) { (userArray, error) in
+        VKHelper.shared.getFriendsID(in: self, count: 100, offset: 0, id: 25210402) { (userArray, error) in
 //MARK:Image
         let catPictureURL = URL(string: (userArray?[3].photo_200_orig)!)!
-        
-        
         let session = URLSession(configuration: .default)
-        
         // Define a download task. The download task will download the contents of the URL as a Data object and then you can do what you wish with that data.
         let downloadPicTask = session.dataTask(with: catPictureURL) { (data, response, error) in
             // The download has finished.
@@ -52,14 +72,10 @@ class ViewController: UIViewController {
             }
         }
         downloadPicTask.resume()
-        
+//MARK:end Image
+            
         print("\(String(describing: userArray?[0].first_name))", "\(String(describing: userArray?[0].id))", "\(String(describing: userArray?[0].photo_200_orig))")
             }
-//        VKHelper.shared.getFriends(in: self) { (error) in
-//            
-//            print(error)
-//        }
-
     }
     
 }

@@ -47,7 +47,7 @@ class FriendsController: UITableViewController {
     
     func getFriendsFromVK() {
         
-        VKHelper.shared.getFriendsID(in: self, count: friendsInRequests, offset: friends.count) { (userArray, error) in
+        VKHelper.shared.getFriends(in: self, count: friendsInRequests, offset: friends.count) { (userArray, error) in
             
             // Добавляем новых друзей в список
             var newFriends: [VKUser] = []
