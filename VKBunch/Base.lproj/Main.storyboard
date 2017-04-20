@@ -22,15 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h66-Xd-Mle">
-                                <rect key="frame" x="124" y="269" width="73" height="30"/>
-                                <state key="normal" title="My friends">
-                                    <color key="titleColor" red="1" green="0.64012372733067191" blue="0.55453000056091406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sxC-6x-Wy0" kind="show" id="5BH-zO-8c2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-Mi-Tqu">
                                 <rect key="frame" x="252" y="496" width="52" height="18"/>
                                 <constraints>
@@ -42,8 +33,8 @@
                                     <action selector="ButtonLogOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNV-St-rxc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_vk_activity_logo" highlightedImage="ic_vk_ios7_activity_logo" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-M5-9vl">
-                                <rect key="frame" x="20" y="85" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" highlightedImage="ic_vk_ios7_activity_logo" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-M5-9vl">
+                                <rect key="frame" x="20" y="85" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PES-xd-iDd">
@@ -57,15 +48,24 @@
                                     <action selector="ButtonLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIT-Vf-pZ0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h66-Xd-Mle">
+                                <rect key="frame" x="124" y="318" width="73" height="30"/>
+                                <state key="normal" title="My friends">
+                                    <color key="titleColor" red="1" green="0.64012372733067191" blue="0.55453000056091406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sxC-6x-Wy0" kind="show" id="5BH-zO-8c2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PES-xd-iDd" secondAttribute="bottom" constant="5" id="2eu-lo-eBB"/>
-                            <constraint firstItem="h66-Xd-Mle" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7ci-pd-dvn"/>
                             <constraint firstItem="PES-xd-iDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jzk-E5-Xcc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vb-Mi-Tqu" secondAttribute="bottom" constant="5" id="LlO-F9-dxh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Vb-Mi-Tqu" secondAttribute="trailing" id="SKw-6c-93g"/>
-                            <constraint firstItem="h66-Xd-Mle" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yXR-JX-rSb"/>
+                            <constraint firstItem="h66-Xd-Mle" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oaz-tb-AiY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h66-Xd-Mle" secondAttribute="bottom" constant="171" id="sLX-uQ-QIe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R67-po-qor"/>
@@ -181,7 +181,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ni-dS-gpn" id="dhk-cC-6WA">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -250,7 +250,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_vk_activity_logo" width="60" height="60"/>
         <image name="ic_vk_ios7_activity_logo" width="60" height="60"/>
     </resources>
 </document>

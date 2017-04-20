@@ -34,7 +34,7 @@ class FriendsController: UITableViewController {
         }
         
         // Если последняя ячейка, то грузим следующую порцию друзей
-        if indexPath.row == friends.count - 21 {
+        if indexPath.row == friends.count - 20 {
             getFriendsFromVK()
         }
 
@@ -47,7 +47,7 @@ class FriendsController: UITableViewController {
     
     func getFriendsFromVK() {
         
-        VKHelper.shared.getFriends(in: self, count: friendsInRequests, offset: friends.count) { (userArray, error) in
+        VKHelper.shared.getFriendsID(in: self, count: friendsInRequests, offset: friends.count) { (userArray, error) in
             
             // Добавляем новых друзей в список
             var newFriends: [VKUser] = []
