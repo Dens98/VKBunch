@@ -18,7 +18,14 @@ enum MyError: String, Error {
 
 class VKHelper: NSObject {
     // My code
-    // sent to ViewCntr array but no error
+    
+    struct Friend {
+        var id: Int?
+        var firstName: String?
+        var lastName: String?
+        var photo200: String?
+    }
+    var friendArray = [[Friend]]()
     
     //My code
     
@@ -26,7 +33,7 @@ class VKHelper: NSObject {
     
     typealias SimpleCompletion = (Error?) -> Void
     fileprivate var completion: SimpleCompletion?
-    
+    var contr: UIViewController!
     fileprivate weak var controller: UIViewController?
     
     let SCOPE = [VK_PER_FRIENDS, VK_PER_WALL, VK_PER_AUDIO, VK_PER_PHOTOS, VK_PER_NOHTTPS, VK_PER_EMAIL, VK_PER_MESSAGES, VK_PER_OFFLINE]
@@ -34,10 +41,10 @@ class VKHelper: NSObject {
     override init() {
         super.init()
         
-        
         VKSdk.initialize(withAppId: "5944407")
         VKSdk.instance().register(self)
         VKSdk.instance().uiDelegate = self
+
     }
     
     func auth(in controller: UIViewController, completion: @escaping SimpleCompletion) {
@@ -225,24 +232,26 @@ class VKHelper: NSObject {
                 completion(nil, error)
             }
         }
-        
+    }
+    
+    
+    func addMyFriend() {
+        getFriendsOutCF(in: controller!) { (usersArray, error) in
+//            for i in 0..<Int((usersArray?.count)!) {
+//                                self.friendArray[0][i].id = (usersArray?[UInt(i)].id as! Int)
+//                                self.friendArray[0][i].firstName = usersArray?[UInt(i)].first_name
+//                                self.friendArray[0][i].lastName = usersArray?[UInt(i)].last_name
+//                                self.friendArray[0][i].photo200 = usersArray?[UInt(i)].photo_200_orig
+//                                print(String(i + 1) + self.friendArray[0][i].lastName! + self.friendArray[0][i].firstName!)
+//                            }
+            
+        }
+  
     }
     
     
     
- //   var audioReq: VKRequest? = VKApi.audio().get([VK_API_OWNER_ID: "896232"])
-
-//    audioReq.execute(withResultBlock: {(_ response: VKResponse) -> Void in
-//    print("Json result: \(response.json)")
-//    }, errorBlock: {(_ error: Error?) -> Void in
-//    if error?.code != VK_API_ERROR {
-//    error?.vkError?.request?.repeat()
-//    }
-//    else {
-//    print("VK error: \(error)")
-//    }
-//    })
-//    
+    
     
     
 }
