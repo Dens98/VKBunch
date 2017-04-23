@@ -6,6 +6,7 @@ target 'VKBunch' do
   use_frameworks!
 
 pod "VK-ios-sdk"
+pod "RealmSwift"
   # Pods for VKBunch
 
   target 'VKBunchTests' do
