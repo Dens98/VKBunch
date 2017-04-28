@@ -25,7 +25,7 @@ class Friends {
 class VKHelper: NSObject {
     // My code
     
-    var friendArray = [[Friends]]()
+    var friendsArray = Array<Array<Friends>>()
     var myID: Int = 0
     //My code
     
@@ -48,7 +48,6 @@ class VKHelper: NSObject {
     
     func auth(in controller: UIViewController, completion: @escaping SimpleCompletion) {
         VKSdk.wakeUpSession(SCOPE) { (state, error) in
-            
             if state == VKAuthorizationState.authorized {
                 print("Authorized")
                 completion(nil)
@@ -179,6 +178,7 @@ class VKHelper: NSObject {
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig"] as [String : Any]
                 VKApi.friends().get(params).execute(resultBlock: { (result) in
+                    
                     guard let result = result else {
                         completion(nil, MyError.badResult)
                         return
@@ -203,32 +203,42 @@ class VKHelper: NSObject {
     
     func addMyFriends(in controller: UIViewController) {
         getFriendsOutCF(in: controller) { (usersArray, error) in
+// Int((usersArray?.count)!)
+//            for i in 0..<Int((usersArray?.count)!) {
+//                var friend = Friends()
+//                friend.id = (usersArray?[UInt(i)].id as! Int)
+//                friend.firstName = usersArray?[UInt(i)].first_name
+//                friend.lastName = usersArray?[UInt(i)].last_name
+//                friend.photo200 = usersArray?[UInt(i)].photo_200_orig
+//                self.friendArray.append([friend])
+//                print(String(i + 1) + ". " + self.friendArray[i].firstName! + " " + self.friendArray[i].lastName! + " " + String(Int((usersArray?.count)!)))
+//            }
+            
+            
+            var friendTemp = Array<Friends>()
+            var friend = Friends()
             for i in 0..<Int((usersArray?.count)!) {
-                                var friend = Friends()
-                                friend.id = (usersArray?[UInt(i)].id as! Int)
-                                friend.firstName = usersArray?[UInt(i)].first_name
-                                friend.lastName = usersArray?[UInt(i)].last_name
-                                friend.photo200 = usersArray?[UInt(i)].photo_200_orig
-                                self.friendArray[0][i] = friend
-                                print(String(i + 1) + self.friendArray[0][i].lastName! + self.friendArray[0][i].firstName!)
-                            }
+                friend.id = (usersArray?[UInt(i)].id as! Int)
+                friend.firstName = usersArray?[UInt(i)].first_name
+                friend.lastName = usersArray?[UInt(i)].last_name
+                friend.photo200 = usersArray?[UInt(i)].photo_200_orig
+                friendTemp.append(friend)
+            }
+            self.friendsArray.append(friendTemp)
+            print(self.friendsArray[0][55].firstName! + self.friendsArray[0][55].lastName!)
         }
-  
     }
-    
-    
-    
-    
-    
-    
+    func addFriends(){
+        
+    }
 }
-
-
 
 
 extension VKHelper: VKSdkDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        myID = result.user.id.intValue
+//        myID = result.user.id.intValue
+//        print(String(result.user.id.intValue))
+        let x = result.user
         print(result.state)
         completion?(result.error)
     }

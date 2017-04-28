@@ -53,7 +53,13 @@ class ViewController: UIViewController {
         downloadPicTask.resume()
 //MARK:end Image
             }
+        
             VKHelper.shared.addMyFriends(in: self)
+        let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: UIAlertControllerStyle.alert)
+
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
