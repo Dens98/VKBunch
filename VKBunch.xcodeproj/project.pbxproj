@@ -14,8 +14,8 @@
 		0107E8EF1E855EE300C3D3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0107E8ED1E855EE300C3D3BA /* LaunchScreen.storyboard */; };
 		0107E8FA1E855EE300C3D3BA /* VKBunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E8F91E855EE300C3D3BA /* VKBunchTests.swift */; };
 		0107E9051E855EE300C3D3BA /* VKBunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E9041E855EE300C3D3BA /* VKBunchUITests.swift */; };
-		010F4C081EABB507000986C8 /* Specimen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F4C071EABB507000986C8 /* Specimen.swift */; };
 		01784E7B1E9A1EA0009D2DA1 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */; };
+		9234301F1EAD2E31002C7F64 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234301E1EAD2E31002C7F64 /* Friend.swift */; };
 		9295C29D1E86E6C70057A0A3 /* VKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C29C1E86E6C70057A0A3 /* VKHelper.swift */; };
 		965D00D1CBFC24C3EEA748FD /* Pods_VKBunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */; };
 		B38E1144A83B8727E6793D00 /* Pods_VKBunchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA00F3424F5A16D5A2338E67 /* Pods_VKBunchTests.framework */; };
@@ -53,7 +53,6 @@
 		0107E9001E855EE300C3D3BA /* VKBunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKBunchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0107E9041E855EE300C3D3BA /* VKBunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKBunchUITests.swift; sourceTree = "<group>"; };
 		0107E9061E855EE300C3D3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		010F4C071EABB507000986C8 /* Specimen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specimen.swift; sourceTree = "<group>"; };
 		01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		01C66CA41E85667D00C753FA /* VKBunch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKBunch-Bridging-Header.h"; sourceTree = "<group>"; };
 		14DD5B5D919C65D1CA6FA1F8 /* Pods-VKBunchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		37A283A76B78F29AE279A61F /* Pods-VKBunchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A0DD8067216D7572343F425 /* Pods_VKBunchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1EB7DAB663BACD349DBBAF /* Pods-VKBunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.debug.xcconfig"; sourceTree = "<group>"; };
+		9234301E1EAD2E31002C7F64 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		9295C29C1E86E6C70057A0A3 /* VKHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKHelper.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA08038E7EEC3F53BDE18411 /* Pods-VKBunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,11 +121,12 @@
 		0107E8E31E855EE300C3D3BA /* VKBunch */ = {
 			isa = PBXGroup;
 			children = (
+				926AD22D1EACA41D002948A7 /* Controller */,
+				926AD22C1EACA3F4002948A7 /* Model */,
 				0107E8E41E855EE300C3D3BA /* AppDelegate.swift */,
 				0107E8E61E855EE300C3D3BA /* ViewController.swift */,
 				0107E8E81E855EE300C3D3BA /* Main.storyboard */,
 				9295C29C1E86E6C70057A0A3 /* VKHelper.swift */,
-				010F4C071EABB507000986C8 /* Specimen.swift */,
 				01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */,
 				0107E8EB1E855EE300C3D3BA /* Assets.xcassets */,
 				0107E8ED1E855EE300C3D3BA /* LaunchScreen.storyboard */,
@@ -164,6 +165,21 @@
 				14DD5B5D919C65D1CA6FA1F8 /* Pods-VKBunchUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		926AD22C1EACA3F4002948A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9234301E1EAD2E31002C7F64 /* Friend.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		926AD22D1EACA41D002948A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		C4123FC68345F3CDD933A126 /* Frameworks */ = {
@@ -463,9 +479,9 @@
 			files = (
 				9295C29D1E86E6C70057A0A3 /* VKHelper.swift in Sources */,
 				01784E7B1E9A1EA0009D2DA1 /* FriendsController.swift in Sources */,
+				9234301F1EAD2E31002C7F64 /* Friend.swift in Sources */,
 				0107E8E71E855EE300C3D3BA /* ViewController.swift in Sources */,
 				0107E8E51E855EE300C3D3BA /* AppDelegate.swift in Sources */,
-				010F4C081EABB507000986C8 /* Specimen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,12 +635,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3V2GJXUSCV;
 				INFOPLIST_FILE = VKBunch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shust.Test2.VKBunch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "VKBunch/VKBunch-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -637,12 +655,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3V2GJXUSCV;
 				INFOPLIST_FILE = VKBunch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shust.Test2.VKBunch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "VKBunch/VKBunch-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

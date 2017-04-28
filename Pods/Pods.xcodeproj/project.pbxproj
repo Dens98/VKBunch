@@ -1885,40 +1885,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C62C7A4AB82D388A4A19F696E219F7E /* Debug */ = {
+		0DD378A455E569F7E6B9BB50B0213D1B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B809B933EBB93644AED5CBD409A5176 /* Pods-VKBunchUITests.debug.xcconfig */;
+			baseConfigurationReference = DFA967C563E37C0B0B7CD1AF4D06DC35 /* VK-ios-sdk.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VK-ios-sdk";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-VKBunchUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_VKBunchUITests;
+				INFOPLIST_FILE = "Target Support Files/VK-ios-sdk/ResourceBundle-VKSdkResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = VKSdkResources;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 		1117A74CF1C6C7AD975BC01B39668C3C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2025,24 +2008,7 @@
 			};
 			name = Release;
 		};
-		5483006BED7A500BD44B3FE19C3A5C28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFA967C563E37C0B0B7CD1AF4D06DC35 /* VK-ios-sdk.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VK-ios-sdk";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/VK-ios-sdk/ResourceBundle-VKSdkResources-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = VKSdkResources;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		566BF4AA5E23287F7D0712BDCC4BBADB /* Debug */ = {
+		5A73AC7CE181CABD10008D31E73290D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 350603E75F44ACBD10739F4C92FBFA90 /* Pods-VKBunchTests.debug.xcconfig */;
 			buildSettings = {
@@ -2071,11 +2037,48 @@
 				PRODUCT_NAME = Pods_VKBunchTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		68178C6CADA442766243F69872498BDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4DBE890717127C30338F7C2C65B66C2 /* Pods-VKBunchUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VKBunchUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_VKBunchUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		6968ECF87C4DF2A6F4729FA9866A62FF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2109,50 +2112,15 @@
 			};
 			name = Debug;
 		};
-		84DF9DF06BB75D43EFB1381406AA57E5 /* Release */ = {
+		89A1FA233126CB190305D46896D8CF0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E06F974CAE3E333973C941F042FC87AE /* Pods-VKBunchTests.release.xcconfig */;
+			baseConfigurationReference = 4B809B933EBB93644AED5CBD409A5176 /* Pods-VKBunchUITests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-VKBunchTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_VKBunchTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9F4EA46E03704B90BA44B46AE217C48F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4DBE890717127C30338F7C2C65B66C2 /* Pods-VKBunchUITests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2165,7 +2133,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-VKBunchUITests/Pods-VKBunchUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2173,46 +2141,12 @@
 				PRODUCT_NAME = Pods_VKBunchUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
-		};
-		A61AF03B22DC66CA10F36921B43BA8E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF136AC0B58E94FC3F3AFF3063586F0D /* Pods-VKBunch.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-VKBunch/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VKBunch/Pods-VKBunch.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_VKBunch;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
+			name = Debug;
 		};
 		BAE27E3FD94DE04A8E0F1DE4844AAD54 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2245,6 +2179,24 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		BF8D344C52F1E1B918B6DF214284CC76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA967C563E37C0B0B7CD1AF4D06DC35 /* VK-ios-sdk.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VK-ios-sdk";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/VK-ios-sdk/ResourceBundle-VKSdkResources-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = VKSdkResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2290,41 +2242,41 @@
 			};
 			name = Debug;
 		};
-		D1A3EE844F7488993216A92EFE1BB7CD /* Debug */ = {
+		DE32DA44FDC6F1A080A644277BFC1F1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF0C9838C50AFE69F4DC29B83D48EBF8 /* Pods-VKBunch.debug.xcconfig */;
+			baseConfigurationReference = E06F974CAE3E333973C941F042FC87AE /* Pods-VKBunchTests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-VKBunch/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-VKBunchTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-VKBunch/Pods-VKBunch.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MODULEMAP_FILE = "Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_VKBunch;
+				PRODUCT_NAME = Pods_VKBunchTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		E4F15F09653F3EC5EE3F5116EE725927 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2358,20 +2310,76 @@
 			};
 			name = Release;
 		};
-		E86296CF619D45FBF2F9776F7C5049F2 /* Debug */ = {
+		E795B28E81FE447F5804A633ADAEDAF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFA967C563E37C0B0B7CD1AF4D06DC35 /* VK-ios-sdk.xcconfig */;
+			baseConfigurationReference = AF136AC0B58E94FC3F3AFF3063586F0D /* Pods-VKBunch.release.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/VK-ios-sdk";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/VK-ios-sdk/ResourceBundle-VKSdkResources-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = VKSdkResources;
+				INFOPLIST_FILE = "Target Support Files/Pods-VKBunch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VKBunch/Pods-VKBunch.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_VKBunch;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EFFBF09A8354E04458EFA8F99FE5BBD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF0C9838C50AFE69F4DC29B83D48EBF8 /* Pods-VKBunch.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VKBunch/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VKBunch/Pods-VKBunch.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_VKBunch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -2422,8 +2430,8 @@
 		9391D30E071AA6DFA484242FE8AA9AA6 /* Build configuration list for PBXNativeTarget "Pods-VKBunchUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C62C7A4AB82D388A4A19F696E219F7E /* Debug */,
-				9F4EA46E03704B90BA44B46AE217C48F /* Release */,
+				89A1FA233126CB190305D46896D8CF0A /* Debug */,
+				68178C6CADA442766243F69872498BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2440,8 +2448,8 @@
 		9C88845B44DC273A7D0985211B193148 /* Build configuration list for PBXNativeTarget "VK-ios-sdk-VKSdkResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E86296CF619D45FBF2F9776F7C5049F2 /* Debug */,
-				5483006BED7A500BD44B3FE19C3A5C28 /* Release */,
+				BF8D344C52F1E1B918B6DF214284CC76 /* Debug */,
+				0DD378A455E569F7E6B9BB50B0213D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2449,8 +2457,8 @@
 		A3F54C291918BA79334205028891CDD3 /* Build configuration list for PBXNativeTarget "Pods-VKBunch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D1A3EE844F7488993216A92EFE1BB7CD /* Debug */,
-				A61AF03B22DC66CA10F36921B43BA8E4 /* Release */,
+				EFFBF09A8354E04458EFA8F99FE5BBD7 /* Debug */,
+				E795B28E81FE447F5804A633ADAEDAF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2476,8 +2484,8 @@
 		BE1496DB1D849603AD5444D9A9172AD4 /* Build configuration list for PBXNativeTarget "Pods-VKBunchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				566BF4AA5E23287F7D0712BDCC4BBADB /* Debug */,
-				84DF9DF06BB75D43EFB1381406AA57E5 /* Release */,
+				5A73AC7CE181CABD10008D31E73290D9 /* Debug */,
+				DE32DA44FDC6F1A080A644277BFC1F1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

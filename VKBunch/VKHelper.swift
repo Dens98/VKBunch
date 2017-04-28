@@ -15,18 +15,18 @@ enum MyError: String, Error {
     case unableToParse = "unable to parse"
     case badResult = "bad result"
 }
+class Friends {
+    var id: Int?
+    var firstName: String?
+    var lastName: String?
+    var photo200: String?
+}
 
 class VKHelper: NSObject {
     // My code
     
-    struct Friend {
-        var id: Int?
-        var firstName: String?
-        var lastName: String?
-        var photo200: String?
-    }
-    var friendArray = [[Friend]]()
-    
+    var friendArray = [[Friends]]()
+    var myID: Int = 0
     //My code
     
     static let shared = VKHelper()
@@ -48,7 +48,7 @@ class VKHelper: NSObject {
     
     func auth(in controller: UIViewController, completion: @escaping SimpleCompletion) {
         VKSdk.wakeUpSession(SCOPE) { (state, error) in
-
+            
             if state == VKAuthorizationState.authorized {
                 print("Authorized")
                 completion(nil)
@@ -75,8 +75,6 @@ class VKHelper: NSObject {
     
     
     func getFriends(in controller: UIViewController, count: Int, offset: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
-//        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-//        appDelegate?.window?.rootViewController
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
@@ -113,8 +111,6 @@ class VKHelper: NSObject {
     
     //MARK:getFriendsID
     func getFriendsID(in controller: UIViewController, count: Int, offset: Int, id: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
-        //        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        //        appDelegate?.window?.rootViewController
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
@@ -151,8 +147,6 @@ class VKHelper: NSObject {
     
     //MARK:getFriendIdOutCF
     func getFriendsIdOutCF(in controller: UIViewController, id: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
-        //        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        //        appDelegate?.window?.rootViewController
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
@@ -181,8 +175,6 @@ class VKHelper: NSObject {
     }
     //MARK:getFriendOutCF
     func getFriendsOutCF(in controller: UIViewController, completion: @escaping (VKUsersArray?, Error?) -> Void) {
-        //        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        //        appDelegate?.window?.rootViewController
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig"] as [String : Any]
@@ -209,16 +201,17 @@ class VKHelper: NSObject {
     }
     
     
-    func addMyFriend() {
-        getFriendsOutCF(in: controller!) { (usersArray, error) in
-//            for i in 0..<Int((usersArray?.count)!) {
-//                                self.friendArray[0][i].id = (usersArray?[UInt(i)].id as! Int)
-//                                self.friendArray[0][i].firstName = usersArray?[UInt(i)].first_name
-//                                self.friendArray[0][i].lastName = usersArray?[UInt(i)].last_name
-//                                self.friendArray[0][i].photo200 = usersArray?[UInt(i)].photo_200_orig
-//                                print(String(i + 1) + self.friendArray[0][i].lastName! + self.friendArray[0][i].firstName!)
-//                            }
-            
+    func addMyFriends(in controller: UIViewController) {
+        getFriendsOutCF(in: controller) { (usersArray, error) in
+            for i in 0..<Int((usersArray?.count)!) {
+                                var friend = Friends()
+                                friend.id = (usersArray?[UInt(i)].id as! Int)
+                                friend.firstName = usersArray?[UInt(i)].first_name
+                                friend.lastName = usersArray?[UInt(i)].last_name
+                                friend.photo200 = usersArray?[UInt(i)].photo_200_orig
+                                self.friendArray[0][i] = friend
+                                print(String(i + 1) + self.friendArray[0][i].lastName! + self.friendArray[0][i].firstName!)
+                            }
         }
   
     }
@@ -235,6 +228,8 @@ class VKHelper: NSObject {
 
 extension VKHelper: VKSdkDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
+        myID = result.user.id.intValue
+        print(result.state)
         completion?(result.error)
     }
     

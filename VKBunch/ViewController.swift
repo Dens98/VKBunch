@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         downloadPicTask.resume()
 //MARK:end Image
             }
-            VKHelper.shared.addMyFriend()
+            VKHelper.shared.addMyFriends(in: self)
     }
     
 }
