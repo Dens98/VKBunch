@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Friend: Object {
+class FriendRealm: Object {
     dynamic var id = 0
     dynamic var first_name = ""
     dynamic var last_name = ""

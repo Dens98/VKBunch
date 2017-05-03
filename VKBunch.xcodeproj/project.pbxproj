@@ -15,7 +15,7 @@
 		0107E8FA1E855EE300C3D3BA /* VKBunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E8F91E855EE300C3D3BA /* VKBunchTests.swift */; };
 		0107E9051E855EE300C3D3BA /* VKBunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E9041E855EE300C3D3BA /* VKBunchUITests.swift */; };
 		01784E7B1E9A1EA0009D2DA1 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */; };
-		9234301F1EAD2E31002C7F64 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234301E1EAD2E31002C7F64 /* Friend.swift */; };
+		9234301F1EAD2E31002C7F64 /* FriendRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234301E1EAD2E31002C7F64 /* FriendRealm.swift */; };
 		9295C29D1E86E6C70057A0A3 /* VKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C29C1E86E6C70057A0A3 /* VKHelper.swift */; };
 		965D00D1CBFC24C3EEA748FD /* Pods_VKBunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */; };
 		B38E1144A83B8727E6793D00 /* Pods_VKBunchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA00F3424F5A16D5A2338E67 /* Pods_VKBunchTests.framework */; };
@@ -60,7 +60,7 @@
 		37A283A76B78F29AE279A61F /* Pods-VKBunchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A0DD8067216D7572343F425 /* Pods_VKBunchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1EB7DAB663BACD349DBBAF /* Pods-VKBunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.debug.xcconfig"; sourceTree = "<group>"; };
-		9234301E1EAD2E31002C7F64 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		9234301E1EAD2E31002C7F64 /* FriendRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRealm.swift; sourceTree = "<group>"; };
 		9295C29C1E86E6C70057A0A3 /* VKHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKHelper.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA08038E7EEC3F53BDE18411 /* Pods-VKBunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		926AD22C1EACA3F4002948A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9234301E1EAD2E31002C7F64 /* Friend.swift */,
+				9234301E1EAD2E31002C7F64 /* FriendRealm.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -479,7 +479,7 @@
 			files = (
 				9295C29D1E86E6C70057A0A3 /* VKHelper.swift in Sources */,
 				01784E7B1E9A1EA0009D2DA1 /* FriendsController.swift in Sources */,
-				9234301F1EAD2E31002C7F64 /* Friend.swift in Sources */,
+				9234301F1EAD2E31002C7F64 /* FriendRealm.swift in Sources */,
 				0107E8E71E855EE300C3D3BA /* ViewController.swift in Sources */,
 				0107E8E51E855EE300C3D3BA /* AppDelegate.swift in Sources */,
 			);
