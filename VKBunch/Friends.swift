@@ -14,4 +14,5 @@ class Friends{
     var name = ""
     var surname = ""
     var photo = ""
+    
 }
