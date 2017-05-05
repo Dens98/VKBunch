@@ -18,7 +18,11 @@ class SearchViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    func getIdPersonA () -> Int {
+        var id = Int(String(describing: idPersonA))
+        return id!
+    }
+    
     @IBAction func searchButton(_ sender: Any) {
         
     }

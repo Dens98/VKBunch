@@ -9,10 +9,14 @@
 import Foundation
 
 
-class Friends{
+class Friends: SearchViewController {
     var user_id = ""
     var name = ""
     var surname = ""
     var photo = ""
+    
+    
+    
+    
     
 }
