@@ -15,12 +15,7 @@ enum MyError: String, Error {
     case unableToParse = "unable to parse"
     case badResult = "bad result"
 }
-class Friends {
-    var id: Int?
-    var firstName: String?
-    var lastName: String?
-    var photo200: String?
-}
+
 
 class VKHelper: NSObject {
     // My code
