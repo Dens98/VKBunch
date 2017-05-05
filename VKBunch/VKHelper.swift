@@ -68,79 +68,10 @@ class VKHelper: NSObject {
     }
     
     
-    func getFriends(in controller: UIViewController, count: Int, offset: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
-        auth(in: controller) { error in
-            if error == nil{
-                let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
-                              VK_API_OFFSET : offset,
-                              VK_API_COUNT : count] as [String : Any]
-                
-                
-                VKApi.friends().get(params).execute(resultBlock: { (result) in
-                   
-                    
-                    guard let result = result else {
-                        completion(nil, MyError.badResult)
-                        return
-                    }
-                    
-                    guard let usersArray = result.parsedModel as? VKUsersArray else {
-                        completion(nil, MyError.unableToParse)
-                        return
-                    }
-                    
-                    completion(usersArray, nil)
-                },
-                errorBlock: { error in
-                    completion(nil, error)
-                })
-            } else {
-                completion(nil, error)
-            }
-        }
-        
-    }
     
-    
-    
-    //MARK:getFriendsID
-    func getFriendsID(in controller: UIViewController, count: Int, offset: Int, id: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
-        auth(in: controller) { error in
-            if error == nil{
-                let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
-                              VK_API_USER_ID: id,
-                              VK_API_OFFSET : offset,
-                              VK_API_COUNT : count] as [String : Any]
-                
-                
-                
-                VKApi.friends().get(params).execute(resultBlock: { (result) in
-                    
-                    
-                    guard let result = result else {
-                        completion(nil, MyError.badResult)
-                        return
-                    }
-                    
-                    guard let usersArray = result.parsedModel as? VKUsersArray else {
-                        completion(nil, MyError.unableToParse)
-                        return
-                    }
-                    
-                    completion(usersArray, nil)
-                },
-                                                    errorBlock: { error in
-                                                        completion(nil, error)
-                })
-            } else {
-                completion(nil, error)
-            }
-        }
-        
-    }
     
     //MARK:getFriendIdOutCF
-    func getFriendsIdOutCF(in controller: UIViewController, id: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
+    func getFriendsID(in controller: UIViewController, id: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
@@ -168,7 +99,7 @@ class VKHelper: NSObject {
         
     }
     //MARK:getFriendOutCF
-    func getFriendsOutCF(in controller: UIViewController, completion: @escaping (VKUsersArray?, Error?) -> Void) {
+    func getFriends(in controller: UIViewController, completion: @escaping (VKUsersArray?, Error?) -> Void) {
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig"] as [String : Any]
@@ -196,38 +127,38 @@ class VKHelper: NSObject {
     }
     
     
-    func addMyFriends(in controller: UIViewController) {
-        getFriendsOutCF(in: controller) { (usersArray, error) in
-// Int((usersArray?.count)!)
+//    func addMyFriends(in controller: UIViewController) {
+//        getFriendsOutCF(in: controller) { (usersArray, error) in
+//// Int((usersArray?.count)!)
+////            for i in 0..<Int((usersArray?.count)!) {
+////                var friend = Friends()
+////                friend.id = (usersArray?[UInt(i)].id as! Int)
+////                friend.firstName = usersArray?[UInt(i)].first_name
+////                friend.lastName = usersArray?[UInt(i)].last_name
+////                friend.photo200 = usersArray?[UInt(i)].photo_200_orig
+////                self.friendArray.append([friend])
+////                print(String(i + 1) + ". " + self.friendArray[i].firstName! + " " + self.friendArray[i].lastName! + " " + String(Int((usersArray?.count)!)))
+////            }
+//            
+//            
+//            var friendTemp = Array<Friends>()
+//            var friend = Friends()
 //            for i in 0..<Int((usersArray?.count)!) {
-//                var friend = Friends()
 //                friend.id = (usersArray?[UInt(i)].id as! Int)
 //                friend.firstName = usersArray?[UInt(i)].first_name
 //                friend.lastName = usersArray?[UInt(i)].last_name
 //                friend.photo200 = usersArray?[UInt(i)].photo_200_orig
-//                self.friendArray.append([friend])
-//                print(String(i + 1) + ". " + self.friendArray[i].firstName! + " " + self.friendArray[i].lastName! + " " + String(Int((usersArray?.count)!)))
+//                friendTemp.append(friend)
 //            }
-            
-            
-            var friendTemp = Array<Friends>()
-            var friend = Friends()
-            for i in 0..<Int((usersArray?.count)!) {
-                friend.id = (usersArray?[UInt(i)].id as! Int)
-                friend.firstName = usersArray?[UInt(i)].first_name
-                friend.lastName = usersArray?[UInt(i)].last_name
-                friend.photo200 = usersArray?[UInt(i)].photo_200_orig
-                friendTemp.append(friend)
-            }
-            self.friendsArray.append(friendTemp)
-            print(self.friendsArray[0][55].firstName! + self.friendsArray[0][55].lastName!)
-        }
-    }
-    func addFriends(){
-        
-    }
+//            self.friendsArray.append(friendTemp)
+//            print(self.friendsArray[0][55].firstName! + self.friendsArray[0][55].lastName!)
+//        }
+//    }
+//    func addFriends(){
+//        
+//    }
 }
-
+//
 
 extension VKHelper: VKSdkDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
