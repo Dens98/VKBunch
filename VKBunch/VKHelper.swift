@@ -70,8 +70,79 @@ class VKHelper: NSObject {
     
     
     
+    func getFriends(in controller: UIViewController, count: Int, offset: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
+        auth(in: controller) { error in
+            if error == nil{
+                let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
+                              VK_API_OFFSET : offset,
+                              VK_API_COUNT : count] as [String : Any]
+                
+                
+                VKApi.friends().get(params).execute(resultBlock: { (result) in
+                    
+                    
+                    guard let result = result else {
+                        completion(nil, MyError.badResult)
+                        return
+                    }
+                    
+                    guard let usersArray = result.parsedModel as? VKUsersArray else {
+                        completion(nil, MyError.unableToParse)
+                        return
+                    }
+                    
+                    completion(usersArray, nil)
+                },
+                                                    errorBlock: { error in
+                                                        completion(nil, error)
+                })
+            } else {
+                completion(nil, error)
+            }
+        }
+        
+    }
+    
+    
+    
+    //MARK:getFriendsID
+    func getFriendsID(in controller: UIViewController, count: Int, offset: Int, id: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
+        auth(in: controller) { error in
+            if error == nil{
+                let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
+                              VK_API_USER_ID: id,
+                              VK_API_OFFSET : offset,
+                              VK_API_COUNT : count] as [String : Any]
+                
+                
+                
+                VKApi.friends().get(params).execute(resultBlock: { (result) in
+                    
+                    
+                    guard let result = result else {
+                        completion(nil, MyError.badResult)
+                        return
+                    }
+                    
+                    guard let usersArray = result.parsedModel as? VKUsersArray else {
+                        completion(nil, MyError.unableToParse)
+                        return
+                    }
+                    
+                    completion(usersArray, nil)
+                },
+                                                    errorBlock: { error in
+                                                        completion(nil, error)
+                })
+            } else {
+                completion(nil, error)
+            }
+        }
+        
+    }
+    
     //MARK:getFriendIdOutCF
-    func getFriendsID(in controller: UIViewController, id: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
+    func getFriendsIdOutCF(in controller: UIViewController, id: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig",
@@ -95,11 +166,12 @@ class VKHelper: NSObject {
             } else {
                 completion(nil, error)
             }
+            
         }
         
     }
     //MARK:getFriendOutCF
-    func getFriends(in controller: UIViewController, completion: @escaping (VKUsersArray?, Error?) -> Void) {
+    func getFriendsOutCF(in controller: UIViewController, completion: @escaping (VKUsersArray?, Error?) -> Void) {
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig"] as [String : Any]

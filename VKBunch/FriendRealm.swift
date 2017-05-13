@@ -9,15 +9,15 @@
 import Foundation
 import RealmSwift
 
-class FriendRealm: Object {
-    dynamic var id = 0
-    dynamic var first_name = ""
-    dynamic var last_name = ""
-    dynamic var photoUrl = ""
-    dynamic var created = NSDate()
+//class FriendRealm: Object {
+//    dynamic var id = 0
+//    dynamic var first_name = ""
+//    dynamic var last_name = ""
+//    dynamic var photoUrl = ""
+//    dynamic var created = NSDate()
 // Specify properties to ignore (Realm won't persist these)
     
 //  override static func ignoredProperties() -> [String] {
 //    return []
 //  }
-}
+//}
