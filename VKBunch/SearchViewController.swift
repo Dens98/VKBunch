@@ -16,15 +16,23 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addTapGestureToHideKeyboard()
         // Do any additional setup after loading the view.
     }
-    func getIdPersonA () -> Int {
-        var id = Int(String(describing: idPersonA))
-        return id!
-    }
+//    func getIdPersonA () -> Int {
+//        var id = Int(String(describing: idPersonA))
+//        return id!
+//    }
     
     @IBAction func searchButton(_ sender: Any) {
+        Friends.shared.addMyFriend(in: self, id: Int(idPersonA.text!)!)
         
+        
+    }
+    
+    func addTapGestureToHideKeyboard() {
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
+        view.addGestureRecognizer(tapGesture)
     }
     
 }

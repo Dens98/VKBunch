@@ -9,21 +9,45 @@
 import Foundation
 
 
-class Friends: SearchViewController{
-    var user_id = 0
-    var name = ""
-    var surname = ""
+struct friendStruct {
+    var id = 0
+    var firstName = ""
+    var lastName = ""
     var photo = ""
+}
+
+class Friends: SearchViewController {
+    static let shared = Friends()
     
     
-    func addingFriends(identificator: Any){
-        self.user_id = identificator as! Int
+    
+    var friendsArray = [[friendStruct]]()
+    
+    func addMyFriend(in controller: SearchViewController, id: Int) {
+        VKHelper.shared.getFriendsIdOutCF(in: self,  id: id) { (usersArray, error) in
+            
+            var friendTemp = [friendStruct]()
+                        var friend = friendStruct()
+                        for i in 0..<Int((usersArray?.count)!) {
+                            friend.id = (usersArray?[UInt(i)].id as! Int)
+                            friend.firstName = (usersArray?[UInt(i)].first_name)!
+                            friend.lastName = (usersArray?[UInt(i)].last_name)!
+                            friend.photo = (usersArray?[UInt(i)].photo_200_orig)!
+                            friendTemp.append(friend)
+                            print(String(friendTemp[i].id))
+                            
+                        }
+                        self.friendsArray.append(friendTemp)
+            for i in 0..<friendTemp.count {
+                print(String(friendTemp[i].id) + friendTemp[i].lastName)
+            }
+            
         }
-    
-    func addingAdditionalInfo(name: String, surname: String, photo: String){
-        self.name = name
-        self.surname = surname
-        self.photo = photo
+//        print(self.friendsArray[0][0].firstName + self.friendsArray[0][0].lastName)
+//        for j in 0..<Int(friendsArray[0].count) {
+//            print(String(Int(friendsArray[0].count)) + friendsArray[0][j].firstName + " " + friendsArray[0][j].lastName)
+//        }
+        
     }
     
     

@@ -128,13 +128,13 @@
 				926AD22D1EACA41D002948A7 /* Controller */,
 				926AD22C1EACA3F4002948A7 /* Model */,
 				0107E8E41E855EE300C3D3BA /* AppDelegate.swift */,
+				ACA42E161EBCBB45005527D0 /* Friends.swift */,
 				0107E8E81E855EE300C3D3BA /* Main.storyboard */,
 				9295C29C1E86E6C70057A0A3 /* VKHelper.swift */,
 				0107E8EB1E855EE300C3D3BA /* Assets.xcassets */,
 				0107E8ED1E855EE300C3D3BA /* LaunchScreen.storyboard */,
 				0107E8F01E855EE300C3D3BA /* Info.plist */,
 				01C66CA41E85667D00C753FA /* VKBunch-Bridging-Header.h */,
-				ACA42E161EBCBB45005527D0 /* Friends.swift */,
 			);
 			path = VKBunch;
 			sourceTree = "<group>";

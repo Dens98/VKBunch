@@ -8,14 +8,44 @@
 
 import UIKit
 import VK_ios_sdk
+import MessageUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var myPhotoSetting: UIImageView?
+    
     override func viewDidAppear(_ animated: Bool) {
         
             }
 
+   
+    @IBAction func ButtonSentEmail(_ sender: Any) {
+        if MFMailComposeViewController.canSendMail() == false {
+            print("Email Send Failed")
+            return
+        }
+        
+        let mailViewController = MFMailComposeViewController()
+        mailViewController.mailComposeDelegate = self
+        
+        mailViewController.setSubject("message to developer")
+        
+        let toRecipients = ["d89163572914@ya.ru"]
+        mailViewController.setToRecipients(toRecipients)
+        mailViewController.setMessageBody("Напишите здесь, что пошло не так. Отзывы приветствуются.", isHTML: false)
+        self.present(mailViewController, animated: true, completion: nil)
+        
+    }
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        switch result {
+        case .cancelled: print("Email Send Cancelled")
+        case .saved:     print("Email Saved as a Draft")
+        case .sent:      print("Email Sent Successfully")
+        case .failed:    print("Email Send Failed")
+        }
+        dismiss(animated: true, completion: nil)
+    }
     
     
     @IBAction func ButtonLogOut(_ sender: Any) {
@@ -24,7 +54,7 @@ class ViewController: UIViewController {
     }
     @IBAction func ButtonLogIn(_ sender: UIButton) {
        
-        VKHelper.shared.getFriendsID(in: self,  id: 2343252) { (usersArray, error) in
+        VKHelper.shared.getFriendsIdOutCF(in: self,  id: 2343252) { (usersArray, error) in
         
         }
 

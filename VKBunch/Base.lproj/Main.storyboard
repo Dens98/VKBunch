@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dWl-6p-rMi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dWl-6p-rMi">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,13 +57,26 @@
                                     <segue destination="sxC-6x-Wy0" kind="show" id="5BH-zO-8c2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEm-3d-NlU">
+                                <rect key="frame" x="76" y="365" width="167" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="NVp-6k-AEb"/>
+                                    <constraint firstAttribute="height" constant="23" id="TaS-xA-rB7"/>
+                                </constraints>
+                                <state key="normal" title="Sent email to developer"/>
+                                <connections>
+                                    <action selector="ButtonSentEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgH-nd-2Ja"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PES-xd-iDd" secondAttribute="bottom" constant="5" id="2eu-lo-eBB"/>
+                            <constraint firstItem="oEm-3d-NlU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="Acv-w3-zcc"/>
                             <constraint firstItem="PES-xd-iDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jzk-E5-Xcc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vb-Mi-Tqu" secondAttribute="bottom" constant="5" id="LlO-F9-dxh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2Vb-Mi-Tqu" secondAttribute="trailing" id="SKw-6c-93g"/>
+                            <constraint firstItem="oEm-3d-NlU" firstAttribute="top" secondItem="h66-Xd-Mle" secondAttribute="bottom" constant="17" id="bJS-8o-epg"/>
                             <constraint firstItem="h66-Xd-Mle" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oaz-tb-AiY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h66-Xd-Mle" secondAttribute="bottom" constant="171" id="sLX-uQ-QIe"/>
                         </constraints>
@@ -89,7 +102,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="myID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qce-Du-nR0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25210402" borderStyle="roundedRect" placeholder="myID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qce-Du-nR0">
                                 <rect key="frame" x="94" y="130" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -236,7 +249,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ni-dS-gpn" id="dhk-cC-6WA">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
