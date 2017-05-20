@@ -26,6 +26,8 @@ class SearchViewController: UIViewController {
     
     @IBAction func searchButton(_ sender: Any) {
         Friends.shared.addMyFriend(in: self, id: Int(idPersonA.text!)!)
+        VKHelper.shared.getFriendsMutual(in: self, source_uid: 25210402, target_uids: [8651177, 32342])
+            
         
         
     }
