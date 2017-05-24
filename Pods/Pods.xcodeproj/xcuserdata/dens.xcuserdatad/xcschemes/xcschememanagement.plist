@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>VK-ios-sdk-VKSdkResources.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,27 +47,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>24432A0BB19C6FBDA7A66A55EAE39B1F</key>
+		<key>0B3E14D48A19DBC0A2CC5FA1367C549C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4535E54CFEAFFC44C8DE065C2DCC3A87</key>
+		<key>0CDF81A592A383A02CFEB3D705F5A993</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BBCB592DC38C4E2FB4078E504D9F148</key>
+		<key>8891D2E8A466BE07EBBFB41E9CC6720A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>784AA4F04D9F96DED92FAC03591CA7B2</key>
+		<key>A80A9CB485C5C1F09D99BD1F624C7E3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DBA1D2EC3B71CC55AEC4C7D86FA4F089</key>
+		<key>AC9769101B31A886558B54F362E8113A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0F282CCB855014663DA03A9111B5FE8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

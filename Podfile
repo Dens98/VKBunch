@@ -7,6 +7,7 @@ target 'VKBunch' do
 
 pod "VK-ios-sdk"
 pod "RealmSwift"
+pod "SwiftyJSON"
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|

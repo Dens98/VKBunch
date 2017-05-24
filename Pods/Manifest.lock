@@ -4,17 +4,20 @@ PODS:
   - Realm/Headers (2.7.0)
   - RealmSwift (2.7.0):
     - Realm (= 2.7.0)
+  - SwiftyJSON (3.1.4)
   - VK-ios-sdk (1.4.6)
 
 DEPENDENCIES:
   - RealmSwift
+  - SwiftyJSON
   - VK-ios-sdk
 
 SPEC CHECKSUMS:
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
 
-PODFILE CHECKSUM: a35595f3eb990c9b069af5d2cd2bace212fe8631
+PODFILE CHECKSUM: 8ccd8b33b1f819eb5fe24c429bcec2201dcdc55d
 
 COCOAPODS: 1.2.1

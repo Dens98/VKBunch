@@ -10,12 +10,14 @@ import Foundation
 
 import UIKit
 import VK_ios_sdk
+import SwiftyJSON
 
 enum MyError: String, Error {
     case unableToParse = "unable to parse"
     case badResult = "bad result"
 }
 
+typealias VKLinksArray = [[Int]]
 
 class VKHelper: NSObject {
     // My code
@@ -198,15 +200,21 @@ class VKHelper: NSObject {
         }
     }
     
-    func getFriendsMutual(in controller: UIViewController, source_uid: Int, target_uids: [Int]) {
+    func getFriendsMutual(in controller: UIViewController, source_uid: Int, target_uid: Int, completion: @escaping ([Int], Error?) -> Void) {
         auth(in: controller) { error in
             if error == nil {
-                let params = ["source_uid" : source_uid, "target_uids" : target_uids] as [String : Any]
+                let params = ["source_uid" : source_uid, "target_uid" : target_uid] as [String : Any]
                 let request = VKApi.request(withMethod: "friends.getMutual", andParameters: params)
                 request?.execute(resultBlock: { (response) in
                     
-                    print(response ?? "Empty")
+                    let json = JSON(response?.json)
+                    print(json ?? nil)
+                    let commonFriends: [Int] = json.arrayObject as! [Int]
+                    print(commonFriends)
                     
+                    //print(response ?? "Empty")
+
+                    completion(commonFriends,error)
                 }, errorBlock: { (error) in
                     
                 })
@@ -216,9 +224,43 @@ class VKHelper: NSObject {
         }
         
     }
-
     
-    
+    func searchLinks(in controller: UIViewController, idA: Int, idB: Int, completion: @escaping (VKLinksArray?, Error?) -> Void) {
+        
+        var links: VKLinksArray = [];
+        
+        // Грузим друзей юзера A
+        self.getFriendsIdOutCF(in: controller, id: idA) { (usersArray, error) in
+            
+            
+            if (error == nil) { // Если ошибок нет
+                
+                for friend in 0..<Int((usersArray?.count)!) {
+                    
+                    
+                    // Для каждого друга грузим список его общих друзей с юзером B
+                    print(usersArray![UInt(friend)].id as! Int)
+                    self.getFriendsMutual(in: controller, source_uid: usersArray![UInt(friend)].id as! Int, target_uid: idB) { (commonFriends, error) in
+                        
+                        if (error == nil) { // Если ошибок нет
+                            
+                            for i in commonFriends {
+                                print("test Array")
+                                print(usersArray![UInt(friend)].id as! Int)
+                                let link = [idA, usersArray![UInt(friend)].id as! Int, commonFriends[i], idB]
+                                links.append(link as! [Int])
+                                
+                            }
+                            
+                            if (UInt(friend) == usersArray?.count) {
+                                completion(links, error)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 extension VKHelper: VKSdkDelegate {

@@ -54,8 +54,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     @IBAction func ButtonLogIn(_ sender: UIButton) {
        
-        VKHelper.shared.getFriendsIdOutCF(in: self,  id: 2343252) { (usersArray, error) in
-        
+        VKHelper.shared.getFriendsIdOutCF(in: self,  id: 25210402) { (usersArray, error) in
+            let test: Int = usersArray![0].id as! Int
+        print(test)
         }
 
                
