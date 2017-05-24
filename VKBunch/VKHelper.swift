@@ -17,6 +17,8 @@ enum MyError: String, Error {
     case badResult = "bad result"
 }
 
+let loadedAnotherLinkNotification = Notification.Name("nnlal")
+
 typealias VKLinksArray = [[Int]]
 
 class VKHelper: NSObject {
@@ -208,11 +210,10 @@ class VKHelper: NSObject {
                 request?.execute(resultBlock: { (response) in
                     
                     let json = JSON(response?.json)
-                    print(json ?? nil)
-                    let commonFriends: [Int] = json.arrayObject as! [Int]
-                    print(commonFriends)
                     
-                    //print(response ?? "Empty")
+                    let commonFriends: [Int] = json.arrayObject as! [Int]
+                    
+                    //print("общие друзья у \(source_uid) и \(target_uid): \(commonFriends)")
 
                     completion(commonFriends,error)
                 }, errorBlock: { (error) in
@@ -225,42 +226,41 @@ class VKHelper: NSObject {
         
     }
     
-    func searchLinks(in controller: UIViewController, idA: Int, idB: Int, completion: @escaping (VKLinksArray?, Error?) -> Void) {
-        
-        var links: VKLinksArray = [];
+    func searchLinks(in controller: UIViewController, idA: Int, idB: Int) {
         
         // Грузим друзей юзера A
         self.getFriendsIdOutCF(in: controller, id: idA) { (usersArray, error) in
             
+            guard error == nil else {
+                print(error)
+                return
+            }
+    
+            var aFriendsIDs = [Int]()
             
-            if (error == nil) { // Если ошибок нет
-                
-                for friend in 0..<Int((usersArray?.count)!) {
+            for user in usersArray!.items{
+                aFriendsIDs.append((user as! VKUser).id as! Int)
+            }
+            
+            for aFriendID in aFriendsIDs{
+                self.getFriendsMutual(in: controller, source_uid: aFriendID, target_uid: idB) { (commonFriends, error) in
                     
-                    
-                    // Для каждого друга грузим список его общих друзей с юзером B
-                    print(usersArray![UInt(friend)].id as! Int)
-                    self.getFriendsMutual(in: controller, source_uid: usersArray![UInt(friend)].id as! Int, target_uid: idB) { (commonFriends, error) in
+                    if (error == nil) { // Если ошибок нет
                         
-                        if (error == nil) { // Если ошибок нет
+                        print("смотрим друга \(aFriendID)")
+                        
+                        for mutualFriend in commonFriends {
+                            let link = [idA, aFriendID, mutualFriend, idB]
                             
-                            for i in commonFriends {
-                                print("test Array")
-                                print(usersArray![UInt(friend)].id as! Int)
-                                let link = [idA, usersArray![UInt(friend)].id as! Int, commonFriends[i], idB]
-                                links.append(link as! [Int])
-                                
-                            }
-                            
-                            if (UInt(friend) == usersArray?.count) {
-                                completion(links, error)
-                            }
+                            print("нашли цепочку \(link)")
+                            NotificationCenter.default.post(name: loadedAnotherLinkNotification, object: link)
                         }
                     }
                 }
             }
         }
     }
+    
 }
 
 extension VKHelper: VKSdkDelegate {

@@ -13,16 +13,23 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var idPersonB: UITextField!
     @IBOutlet weak var RapSlow: UISegmentedControl!
 
+    var links = VKLinksArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         addTapGestureToHideKeyboard()
-        // Do any additional setup after loading the view.
+        
+        
+                
     }
 //    func getIdPersonA () -> Int {
 //        var id = Int(String(describing: idPersonA))
 //        return id!
 //    }
+    
+    
+   
     
     @IBAction func searchButton(_ sender: Any) {
         //Friends.shared.addMyFriend(in: self, id: Int(idPersonA.text!)!)
@@ -30,9 +37,7 @@ class SearchViewController: UIViewController {
 //            
 //        }
         
-        VKHelper.shared.searchLinks(in: self, idA: Int(idPersonA.text!)!, idB: Int(idPersonB.text!)!) { (links, error) in
-            print(links!)
-        }
+        VKHelper.shared.searchLinks(in: self, idA: Int(idPersonA.text!)!, idB: Int(idPersonB.text!)!)
         
         
         
