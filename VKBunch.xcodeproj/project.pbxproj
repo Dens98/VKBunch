@@ -23,9 +23,9 @@
 		B38E1144A83B8727E6793D00 /* Pods_VKBunchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA00F3424F5A16D5A2338E67 /* Pods_VKBunchTests.framework */; };
 		BE6382701ED610D9006E4F2D /* LinkResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE63826F1ED610D9006E4F2D /* LinkResultsViewController.swift */; };
 		BE6382721ED615FB006E4F2D /* UserGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6382711ED615FB006E4F2D /* UserGraphView.xib */; };
-		BE6382741ED61716006E4F2D /* im.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE6382731ED61716006E4F2D /* im.jpg */; };
 		BE6382761ED6177F006E4F2D /* UserGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6382751ED6177F006E4F2D /* UserGraphView.swift */; };
 		BE6382781ED61C5D006E4F2D /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6382771ED61C5D006E4F2D /* LineView.swift */; };
+		BE63827A1ED74209006E4F2D /* im.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE6382791ED74209006E4F2D /* im.jpg */; };
 		FE3F8EB48196AEC76EAB2F9B /* Pods_VKBunchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0DD8067216D7572343F425 /* Pods_VKBunchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,9 +73,9 @@
 		ACA42E161EBCBB45005527D0 /* Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		BE63826F1ED610D9006E4F2D /* LinkResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkResultsViewController.swift; path = ../LinkResultsViewController.swift; sourceTree = "<group>"; };
 		BE6382711ED615FB006E4F2D /* UserGraphView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserGraphView.xib; sourceTree = "<group>"; };
-		BE6382731ED61716006E4F2D /* im.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = im.jpg; path = ../../../../Desktop/im.jpg; sourceTree = "<group>"; };
 		BE6382751ED6177F006E4F2D /* UserGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGraphView.swift; sourceTree = "<group>"; };
 		BE6382771ED61C5D006E4F2D /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		BE6382791ED74209006E4F2D /* im.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = im.jpg; path = ../im.jpg; sourceTree = "<group>"; };
 		CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA08038E7EEC3F53BDE18411 /* Pods-VKBunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.release.xcconfig"; sourceTree = "<group>"; };
 		E968D8887E50E24A0E0EAC06 /* Pods-VKBunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 		0107E8E31E855EE300C3D3BA /* VKBunch */ = {
 			isa = PBXGroup;
 			children = (
+				BE6382791ED74209006E4F2D /* im.jpg */,
 				926AD22D1EACA41D002948A7 /* Controller */,
 				926AD22C1EACA3F4002948A7 /* Model */,
 				0107E8E41E855EE300C3D3BA /* AppDelegate.swift */,
@@ -194,7 +195,6 @@
 		926AD22D1EACA41D002948A7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BE6382731ED61716006E4F2D /* im.jpg */,
 				BE63826F1ED610D9006E4F2D /* LinkResultsViewController.swift */,
 				01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */,
 				0107E8E61E855EE300C3D3BA /* ViewController.swift */,
@@ -333,11 +333,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE63827A1ED74209006E4F2D /* im.jpg in Resources */,
 				0107E8EF1E855EE300C3D3BA /* LaunchScreen.storyboard in Resources */,
 				0107E8EC1E855EE300C3D3BA /* Assets.xcassets in Resources */,
 				BE6382721ED615FB006E4F2D /* UserGraphView.xib in Resources */,
 				0107E8EA1E855EE300C3D3BA /* Main.storyboard in Resources */,
-				BE6382741ED61716006E4F2D /* im.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
