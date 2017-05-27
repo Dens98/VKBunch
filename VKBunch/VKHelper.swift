@@ -18,6 +18,7 @@ enum MyError: String, Error {
 }
 
 let loadedAnotherLinkNotification = Notification.Name("nnlal")
+let loadedMyIdNotification = Notification.Name("myId")
 
 typealias VKLinksArray = [[Int]]
 
@@ -25,7 +26,7 @@ class VKHelper: NSObject {
     // My code
     
     var friendsArray = Array<Array<Friends>>()
-    var myID: Int = 0
+    
     //My code
     
     static let shared = VKHelper()
@@ -71,7 +72,24 @@ class VKHelper: NSObject {
         VKSdk.forceLogout()
     }
     
-    
+    func setMyId(in controller: UIViewController) {
+        auth(in: controller) { error in
+            if error == nil {
+                let request = VKApi.request(withMethod: "users.get", andParameters: nil)
+                request?.execute(resultBlock: { (response) in
+                    
+                    let json = JSON(response?.json! as Any)
+                    let myId: Int = json[0]["id"].object as? Int ?? 0
+                    NotificationCenter.default.post(name: loadedMyIdNotification, object: myId)
+                    
+                }, errorBlock: { (error) in
+                    
+                })
+                
+            }
+            
+        }
+    }
     
     
     func getFriends(in controller: UIViewController, count: Int, offset: Int, completion: @escaping (VKUsersArray?, Error?) -> Void) {

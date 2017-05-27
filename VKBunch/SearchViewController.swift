@@ -20,16 +20,19 @@ class SearchViewController: UIViewController {
 
         addTapGestureToHideKeyboard()
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(newMyIdFound(notification:)), name: loadedMyIdNotification, object: nil)
                 
     }
-//    func getIdPersonA () -> Int {
-//        var id = Int(String(describing: idPersonA))
-//        return id!
-//    }
+    func newMyIdFound(notification: Notification){
+        let myId = notification.object as! Int
+        idPersonA.text = String(myId)
+        
+    }
     
-    
-   
+    @IBAction func setMyIDButton(_ sender: Any) {
+        VKHelper.shared.setMyId(in: self)
+    }
+
     
     @IBAction func searchButton(_ sender: Any) {
         //Friends.shared.addMyFriend(in: self, id: Int(idPersonA.text!)!)
