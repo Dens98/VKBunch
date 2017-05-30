@@ -22,23 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-Mi-Tqu">
-                                <rect key="frame" x="252" y="496" width="52" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="ryZ-sE-NF4"/>
-                                    <constraint firstAttribute="width" constant="52" id="zig-DR-XuR"/>
-                                </constraints>
-                                <state key="normal" title="Log out"/>
-                                <connections>
-                                    <action selector="ButtonLogOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNV-St-rxc"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-M5-9vl">
-                                <rect key="frame" x="20" y="85" width="200" height="200"/>
+                                <rect key="frame" x="20" y="85" width="100" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PES-xd-iDd">
-                                <rect key="frame" x="16" y="496" width="75" height="18"/>
+                                <rect key="frame" x="36" y="471" width="75" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="15J-2D-iDu"/>
                                     <constraint firstAttribute="height" constant="18" id="ch8-7W-U9s"/>
@@ -49,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h66-Xd-Mle">
-                                <rect key="frame" x="124" y="318" width="73" height="30"/>
+                                <rect key="frame" x="124" y="269" width="73" height="30"/>
                                 <state key="normal" title="My friends">
                                     <color key="titleColor" red="1" green="0.64012372733067191" blue="0.55453000056091406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -58,7 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEm-3d-NlU">
-                                <rect key="frame" x="76" y="365" width="167" height="23"/>
+                                <rect key="frame" x="77" y="319" width="167" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="NVp-6k-AEb"/>
                                     <constraint firstAttribute="height" constant="23" id="TaS-xA-rB7"/>
@@ -68,17 +57,28 @@
                                     <action selector="ButtonSentEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgH-nd-2Ja"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-Mi-Tqu">
+                                <rect key="frame" x="232" y="471" width="52" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="ryZ-sE-NF4"/>
+                                    <constraint firstAttribute="width" constant="52" id="zig-DR-XuR"/>
+                                </constraints>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="ButtonLogOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNV-St-rxc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PES-xd-iDd" secondAttribute="bottom" constant="5" id="2eu-lo-eBB"/>
-                            <constraint firstItem="oEm-3d-NlU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="Acv-w3-zcc"/>
-                            <constraint firstItem="PES-xd-iDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jzk-E5-Xcc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vb-Mi-Tqu" secondAttribute="bottom" constant="5" id="LlO-F9-dxh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2Vb-Mi-Tqu" secondAttribute="trailing" id="SKw-6c-93g"/>
-                            <constraint firstItem="oEm-3d-NlU" firstAttribute="top" secondItem="h66-Xd-Mle" secondAttribute="bottom" constant="17" id="bJS-8o-epg"/>
+                            <constraint firstItem="oEm-3d-NlU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C6G-T5-6oU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PES-xd-iDd" secondAttribute="bottom" constant="30" id="CJu-JQ-i3K"/>
+                            <constraint firstItem="PES-xd-iDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="RDp-Ao-5TQ"/>
+                            <constraint firstItem="h66-Xd-Mle" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a0o-oG-Waj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vb-Mi-Tqu" secondAttribute="bottom" constant="30" id="eY7-xo-U4u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Vb-Mi-Tqu" secondAttribute="trailing" constant="20" id="nBL-IA-XW8"/>
                             <constraint firstItem="h66-Xd-Mle" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oaz-tb-AiY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h66-Xd-Mle" secondAttribute="bottom" constant="171" id="sLX-uQ-QIe"/>
+                            <constraint firstItem="oEm-3d-NlU" firstAttribute="top" secondItem="h66-Xd-Mle" secondAttribute="bottom" constant="20" id="qQe-7x-elf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R67-po-qor"/>

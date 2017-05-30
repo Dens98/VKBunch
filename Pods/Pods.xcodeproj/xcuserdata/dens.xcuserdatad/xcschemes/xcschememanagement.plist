@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-VKBunch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,16 +20,6 @@
 			<false/>
 		</dict>
 		<key>Pods-VKBunchUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RealmSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,32 +42,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B3E14D48A19DBC0A2CC5FA1367C549C</key>
+		<key>13C844946478DA13FAC0EBCC1024FA96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0CDF81A592A383A02CFEB3D705F5A993</key>
+		<key>68734A37BEDF0CA162800140BBE9B3F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8891D2E8A466BE07EBBFB41E9CC6720A</key>
+		<key>74844BEBD77DD45E5A6D437CA8251D19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A80A9CB485C5C1F09D99BD1F624C7E3C</key>
+		<key>B9DDB8A15C71B522DDD3E32740E16DB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC9769101B31A886558B54F362E8113A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E0F282CCB855014663DA03A9111B5FE8</key>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

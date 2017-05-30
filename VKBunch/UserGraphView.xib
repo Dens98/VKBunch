@@ -32,6 +32,7 @@
             <constraints>
                 <constraint firstItem="jra-dd-Fev" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DCM-WZ-otH"/>
                 <constraint firstItem="o3w-Qu-x7V" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TCe-vK-2Nq"/>
+                <constraint firstAttribute="bottom" secondItem="o3w-Qu-x7V" secondAttribute="bottom" constant="9.5" id="Z2K-K6-A1p"/>
                 <constraint firstItem="o3w-Qu-x7V" firstAttribute="top" secondItem="jra-dd-Fev" secondAttribute="bottom" constant="5" id="bbn-1U-nHO"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="o3w-Qu-x7V" secondAttribute="trailing" constant="5" id="rEA-fH-4r4"/>
                 <constraint firstItem="jra-dd-Fev" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tqO-71-mSg"/>

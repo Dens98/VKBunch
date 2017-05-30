@@ -16,7 +16,6 @@
 		0107E9051E855EE300C3D3BA /* VKBunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0107E9041E855EE300C3D3BA /* VKBunchUITests.swift */; };
 		01621B8D1EB9E5020027587E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01621B8C1EB9E5020027587E /* SearchViewController.swift */; };
 		01784E7B1E9A1EA0009D2DA1 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01784E7A1E9A1EA0009D2DA1 /* FriendsController.swift */; };
-		9234301F1EAD2E31002C7F64 /* FriendRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234301E1EAD2E31002C7F64 /* FriendRealm.swift */; };
 		9295C29D1E86E6C70057A0A3 /* VKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C29C1E86E6C70057A0A3 /* VKHelper.swift */; };
 		965D00D1CBFC24C3EEA748FD /* Pods_VKBunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */; };
 		ACA42E171EBCBB45005527D0 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA42E161EBCBB45005527D0 /* Friends.swift */; };
@@ -26,6 +25,7 @@
 		BE6382761ED6177F006E4F2D /* UserGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6382751ED6177F006E4F2D /* UserGraphView.swift */; };
 		BE6382781ED61C5D006E4F2D /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6382771ED61C5D006E4F2D /* LineView.swift */; };
 		BE63827A1ED74209006E4F2D /* im.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE6382791ED74209006E4F2D /* im.jpg */; };
+		BE63827C1ED9E555006E4F2D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE63827B1ED9E555006E4F2D /* Person.swift */; };
 		FE3F8EB48196AEC76EAB2F9B /* Pods_VKBunchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0DD8067216D7572343F425 /* Pods_VKBunchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +68,6 @@
 		37A283A76B78F29AE279A61F /* Pods-VKBunchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A0DD8067216D7572343F425 /* Pods_VKBunchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1EB7DAB663BACD349DBBAF /* Pods-VKBunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.debug.xcconfig"; sourceTree = "<group>"; };
-		9234301E1EAD2E31002C7F64 /* FriendRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRealm.swift; sourceTree = "<group>"; };
 		9295C29C1E86E6C70057A0A3 /* VKHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKHelper.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		ACA42E161EBCBB45005527D0 /* Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		BE63826F1ED610D9006E4F2D /* LinkResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkResultsViewController.swift; path = ../LinkResultsViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		BE6382751ED6177F006E4F2D /* UserGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGraphView.swift; sourceTree = "<group>"; };
 		BE6382771ED61C5D006E4F2D /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		BE6382791ED74209006E4F2D /* im.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = im.jpg; path = ../im.jpg; sourceTree = "<group>"; };
+		BE63827B1ED9E555006E4F2D /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CC1E6C4DEDF66EF682A67225 /* Pods_VKBunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKBunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA08038E7EEC3F53BDE18411 /* Pods-VKBunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunch/Pods-VKBunch.release.xcconfig"; sourceTree = "<group>"; };
 		E968D8887E50E24A0E0EAC06 /* Pods-VKBunchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKBunchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKBunchTests/Pods-VKBunchTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +139,7 @@
 				926AD22D1EACA41D002948A7 /* Controller */,
 				926AD22C1EACA3F4002948A7 /* Model */,
 				0107E8E41E855EE300C3D3BA /* AppDelegate.swift */,
+				BE63827B1ED9E555006E4F2D /* Person.swift */,
 				ACA42E161EBCBB45005527D0 /* Friends.swift */,
 				0107E8E81E855EE300C3D3BA /* Main.storyboard */,
 				BE6382771ED61C5D006E4F2D /* LineView.swift */,
@@ -187,7 +188,6 @@
 		926AD22C1EACA3F4002948A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9234301E1EAD2E31002C7F64 /* FriendRealm.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -504,9 +504,9 @@
 				01621B8D1EB9E5020027587E /* SearchViewController.swift in Sources */,
 				BE6382701ED610D9006E4F2D /* LinkResultsViewController.swift in Sources */,
 				ACA42E171EBCBB45005527D0 /* Friends.swift in Sources */,
+				BE63827C1ED9E555006E4F2D /* Person.swift in Sources */,
 				9295C29D1E86E6C70057A0A3 /* VKHelper.swift in Sources */,
 				01784E7B1E9A1EA0009D2DA1 /* FriendsController.swift in Sources */,
-				9234301F1EAD2E31002C7F64 /* FriendRealm.swift in Sources */,
 				0107E8E71E855EE300C3D3BA /* ViewController.swift in Sources */,
 				BE6382781ED61C5D006E4F2D /* LineView.swift in Sources */,
 				0107E8E51E855EE300C3D3BA /* AppDelegate.swift in Sources */,

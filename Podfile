@@ -6,8 +6,8 @@ target 'VKBunch' do
   use_frameworks!
 
 pod "VK-ios-sdk"
-pod "RealmSwift"
 pod "SwiftyJSON"
+pod "Kingfisher"
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|

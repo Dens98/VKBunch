@@ -17,7 +17,7 @@ enum MyError: String, Error {
     case badResult = "bad result"
 }
 
-let loadedAnotherLinkNotification = Notification.Name("nnlal")
+let loadedAnotherLinkNotification = Notification.Name("nameX")
 let loadedMyIdNotification = Notification.Name("myId")
 
 typealias VKLinksArray = [[Int]]
@@ -197,7 +197,7 @@ class VKHelper: NSObject {
         auth(in: controller) { error in
             if error == nil{
                 let params = [VK_API_FIELDS : "name, nickname, photo_200_orig"] as [String : Any]
-                VKApi.friends().get(params).execute(resultBlock: { (result) in
+                VKApi.friends().get(nil).execute(resultBlock: { (result) in
                     
                     guard let result = result else {
                         completion(nil, MyError.badResult)
@@ -219,6 +219,61 @@ class VKHelper: NSObject {
             }
         }
     }
+    
+    func getUsersInfo(in controller: UIViewController, links: [[Int]], completion: @escaping ([Int: Person]?) -> Void) {
+        auth(in: controller) { error in
+            if error == nil {
+                var usersIdArray = [Int]()
+                var usersIdStr: String = ""
+                for link in 0..<links.count {
+                    for idi in 0..<links[link].count{
+                        if !usersIdArray.contains(links[link][idi]){
+                            usersIdArray.append(links[link][idi])
+                            usersIdStr = usersIdStr + String(links[link][idi]) + ","
+                        }
+                    }
+                }
+                let params = ["user_ids" : usersIdStr, "fields" : "photo_400_orig"] as [String : Any]
+                let request = VKApi.request(withMethod: "users.get", andParameters: params)
+                request?.execute(resultBlock: { (response) in
+                    
+                    let json = JSON(response?.json)
+                    
+                    let personFrom = json.arrayObject
+                    var personDict: [Int: Person] = [:]
+                    //print(personFrom)
+                    //print("\n\n")
+                    
+                    var personOnly = Person()
+                    for i in 0..<personFrom!.count {
+                        
+                        personOnly.firstName = json[i]["first_name"].object as? String ?? "fail_first_name"
+                        personOnly.lastName = json[i]["last_name"].object as? String ?? "fail_last_name"
+                        personOnly.photo = json[i]["photo_400_orig"].object as? String ?? "fail_URL"
+                        personOnly.id = json[i]["id"].object as? Int ?? 0
+                        //print(personOnly.firstName + String(personOnly.id) + personOnly.photo)
+                        print(json[i]["id"].object as! Int)
+                        
+                        personDict[json[i]["id"].object as! Int] = personOnly
+                        //personDict = [json[i]["id"].object as! Int : personOnly]
+                        print(personDict[json[i]["id"].object as! Int]!.photo)
+                    }
+                    
+                    print("test:" + personDict[193688362]!.photo)
+                    //let personFromVk = ""
+                    //print("общие друзья у \(source_uid) и \(target_uid): \(commonFriends)")
+                    completion(personDict)
+                }, errorBlock: { (error) in
+                    
+                })
+                
+            } else {
+                print(error)
+            }
+            
+        }
+    }
+    
     
     func getFriendsMutual(in controller: UIViewController, source_uid: Int, target_uid: Int, completion: @escaping ([Int], Error?) -> Void) {
         auth(in: controller) { error in
@@ -260,22 +315,27 @@ class VKHelper: NSObject {
                 aFriendsIDs.append((user as! VKUser).id as! Int)
             }
             
-            for aFriendID in aFriendsIDs{
+            for aFriendID in aFriendsIDs {
                 self.getFriendsMutual(in: controller, source_uid: aFriendID, target_uid: idB) { (commonFriends, error) in
                     
                     if (error == nil) { // Если ошибок нет
                         
-                        print("смотрим друга \(aFriendID)")
+                        //print("смотрим друга \(aFriendID)")
                         
                         for mutualFriend in commonFriends {
                             let link = [idA, aFriendID, mutualFriend, idB]
+                            //print("aFriendID: \(aFriendID); aFriendsIDs.last: \(aFriendsIDs.last!)")
                             
-                            print("нашли цепочку \(link)")
-                            NotificationCenter.default.post(name: loadedAnotherLinkNotification, object: link)
+                            let notifObject: [String: Any] = ["lastFriend": aFriendID == aFriendsIDs.first! && mutualFriend == commonFriends.last!, "link": link]
+                            //print(notifObject)
+                            NotificationCenter.default.post(name: loadedAnotherLinkNotification, object: nil, userInfo: notifObject)
+                            
+                            //print("нашли цепочку \(link)")
                         }
                     }
                 }
             }
+            
         }
     }
     
@@ -283,10 +343,6 @@ class VKHelper: NSObject {
 
 extension VKHelper: VKSdkDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-//        myID = result.user.id.intValue
-//        print(String(result.user.id.intValue))
-        let x = result.user
-        print(result.state)
         completion?(result.error)
     }
     
